@@ -3,3 +3,5 @@
 *.zip
 *.tar.gz
 *.key
+
+__pycache__/

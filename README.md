@@ -4,14 +4,22 @@ Lokale Sprachmodelle mit Ollama nutzen: chatten, Geschichten entwickeln und Mode
 
 Dieses öffentliche Repository enthält **Downloads und Dokumentation**. Der StoryCore-Quellcode bleibt privat. Die App darf kostenlos privat und geschäftlich genutzt werden. Andere Nutzer bitte auf die offiziellen Downloads verweisen; die zentrale Installation in der eigenen Organisation ist erlaubt. [Nutzungsbedingungen](LICENSE.txt).
 
-## Herunterladen
+## Aktueller Download: StoryCore 2.0.4
 
-| Kanal | Download | Inhalt |
+**[StoryCore 2.0.4 für den Mac herunterladen (Installer-ZIP)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.4/StoryCore_2.0.4_Mac-Installer.zip)**
+
+**Neuester veröffentlichter Funktionsstand · Vorabversion.** Enthält die neue Oberfläche, Chat, Projekte, Storytelling, Modellvergleich und Dokumentanhänge per Drag-and-drop. Frühere 2.0.x-Stände sind damit überholt.
+
+ZIP entpacken und **Install-StoryCore.command** doppelklicken. Die App muss neben der Routine liegen. [Alle Downloads zu 2.0.4, einschließlich DMG und PDF-Anleitungen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4).
+
+| Version | Status | Verwendung |
 | --- | --- | --- |
-| Stabil | [StoryCore 1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) | Bewährter bisheriger Stand: Chat, Story, Modelle und Web-Recherche |
-| Vorabversion | [StoryCore 2.0.4](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | Vier Arbeitsbereiche, Projekte, Dokumentanhänge überall, neue Anleitungen und Updater; freiwillig testen |
+| [**2.0.4**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | **Aktuelle Vorabversion** | Neue Oberfläche, Projekte, Dokumentanhänge und Updates |
+| [1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) | Ältere stabile Version | Bisherige Oberfläche ohne die neuen Projektarbeitsbereiche und Dokumentanhänge |
 
-Unter **Assets** das **StoryCore_<Version>_Mac-Installer.zip** laden, entpacken und **Install-StoryCore.command** doppelklicken. Die App muss neben der Routine liegen. Alternativ das DMG öffnen. Die automatisch angebotenen „Source code“-Archive enthalten hier nur diese Dokumentation und sind keine App-Installer.
+**Warum zeigt GitHub bei „Latest“ noch 1.7.1?** 2.0.4 ist als Vorabversion veröffentlicht. GitHubs stabiler Download-Link und der stabile Update-Kanal bleiben deshalb bei 1.7.1. Für die neuen Funktionen den direkten **2.0.4-Link oben** verwenden oder in der App **Updates → Auch Vorabversionen → Jetzt prüfen** wählen.
+
+Die automatisch angebotenen „Source code“-Archive enthalten hier nur die Dokumentation und sind keine App-Installer.
 
 **Apple Silicon (M-Serie), macOS 14 oder neuer.** Kein Node.js, Rust oder Xcode nötig. Die Routine prüft den Mac und Ollama. Falls Ollama fehlt, bietet sie den [offiziellen Download](https://ollama.com/download/mac), das Starten einer vorhandenen Installation oder eine Installation vorerst ohne Ollama an. Modelle anschließend in StoryCore herunterladen.
 
@@ -20,13 +28,13 @@ Die Pakete sind **nicht Apple-notarisiert**. macOS kann eine Freigabe unter Date
 ## Anleitungen
 
 - [Download und Installation](docs/INSTALLATION-MAC.md), mit Ollama und Fehlersuche
-- [Erste Schritte](docs/NUTZUNG.md), neue Navigation, Dateien, Projekte, neue Navigation, Dateien, Projekte, Modelle, Chat, Regler, Figuren, Orte und Vergleich
+- [Erste Schritte](docs/NUTZUNG.md), neue Navigation, Dateien, Projekte, Modelle, Chat, Regler, Figuren, Orte und Vergleich
 - [Projekte und persönliches Profil (2.0.4)](docs/PROJEKTE-2.0.md)
 - [Internetrecherche: Tavily, Serper oder Brave](docs/WEB-RECHERCHE.md)
 - [Updates und Datensicherung](docs/UPDATES.md)
 - [Sicher zu einer älteren Version zurückkehren](docs/ROLLBACK.md)
 
-**Bebilderte PDF-Anleitungen** liegen in jedem Installer und als einzelne Assets beim jeweiligen Release: [1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) · [2.0.4](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4).
+**Bebilderte PDF-Anleitungen** liegen in jedem Installer und als einzelne Assets beim [aktuellen Release 2.0.4](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4).
 
 ![Neue Startseite 2.0.4 mit isolierten Demo-Daten](docs/guide-assets/204-start.png)
 

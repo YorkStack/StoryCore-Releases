@@ -1,6 +1,6 @@
 # StoryCore aktualisieren
 
-Stand: 2.0.6 Beta, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
+Stand: 2.0.7 stabil, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
 
 ## Updates unter /Applications ab 2.0.6 Beta
 
@@ -8,9 +8,9 @@ Stand: 2.0.6 Beta, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 e
 
 Das signierte Paket wird vor dem Austausch in einem separaten Verzeichnis geprüft. Die bisherige App bleibt bis zur Kontrolle der neuen Installation erhalten. Bei Fehlern wird sie mit denselben Rechten zurückgestellt; bei abgebrochener Freigabe bleibt sie unverändert. Ein echtes schreibgeschütztes DMG wird separat erkannt und kann auch mit Administratorrechten nicht aktualisiert werden.
 
-**Einmaliger Übergang:** 2.0.2 bis 2.0.5 brechen bei bestimmten Installationsrechten schon vor dem Download ab. Dieser alte Programmcode lässt sich nicht durch neue Release-Metadaten reparieren. Betroffene Nutzer müssen einmal den [reparierten Installer 2.0.6 Beta](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6) ausführen. Er aktualisiert eine vorhandene App unter `/Applications` mit macOS-Freigabe. Danach ist dieser Weg direkt in der App eingebaut. Chats und Einstellungen werden nicht gelöscht; der separate Installer sichert die App, Nutzerdaten bitte zusätzlich sichern. Ohne verfügbaren Administrator kann eine geschützte Installation weiterhin nur durch die IT geändert werden.
+**Einmaliger Übergang:** 2.0.2 bis 2.0.5 brechen bei bestimmten Installationsrechten schon vor dem Download ab. Dieser alte Programmcode lässt sich nicht durch neue Release-Metadaten reparieren. Betroffene Nutzer müssen einmal den [reparierten Installer 2.0.7](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7) ausführen. Er aktualisiert eine vorhandene App unter `/Applications` mit macOS-Freigabe. Danach ist dieser Weg direkt in der App eingebaut. Chats und Einstellungen werden nicht gelöscht; der separate Installer sichert die App, Nutzerdaten bitte zusätzlich sichern. Ohne verfügbaren Administrator kann eine geschützte Installation weiterhin nur durch die IT geändert werden.
 
-**Release-Status:** 2.0.6 ist Beta und nur im freiwilligen Beta-Kanal sichtbar. 2.0.4 bleibt stabil. Der native Administrator-Dialog ist implementiert; ein kompletter Test mit interaktiver Administratorfreigabe steht noch aus. Unprivilegierter Austausch, Fehler-Rücksetzung, Archiv-Prüfung und Dialogskript-Kompilierung sind automatisiert geprüft.
+**Release-Status:** 2.0.7 ist vom Eigentümer als stabil freigegeben und wird im Standardkanal angeboten. Der native Administrator-Dialog ist implementiert; ein kompletter Test mit interaktiver Administratorfreigabe steht noch aus. Unprivilegierter Austausch, Fehler-Rücksetzung, Archiv-Prüfung und Dialogskript-Kompilierung sind automatisiert geprüft.
 
 ## Für Benutzer
 
@@ -30,7 +30,7 @@ Ein optionaler Token kann bei GitHub-API-Limits helfen. Ein ungültiger alter To
 
 Die Installation zeigt sechs Schritte, einen Downloadbalken mit echten Prozent- und MB-Werten, die vergangene Zeit und die nächste Aktion. Prüfung, Sicherung und Installation verwenden eine Aktivitätsanzeige ohne erfundene Prozentwerte oder Restzeit. Bei Fehlern bleibt die Meldung sichtbar; es gibt keinen automatischen Neustart. „Zurück zu Updates“ schließt die Meldung, „Erneut versuchen“ startet nach erneuter Bestätigung. Nach einem Fehler während der Wiederherstellung zuerst die genannte Sicherung prüfen.
 
-Beim ersten Update auf 2.0.5 verwendet die ältere App noch ihren bisherigen Bildschirm. Die neue Anzeige gilt für nachfolgende Updates. 2.0.5 ist Beta; 2.0.4 bleibt stabil und Latest.
+Beim ersten Update auf 2.0.5 verwendet die ältere App noch ihren bisherigen Bildschirm. Die neue Anzeige gilt für nachfolgende Updates. 2.0.5 bleibt eine ältere Beta; 2.0.7 ist stabil und Latest.
 
 ![Update-Anzeige mit simuliertem Downloadstand](guide-assets/205-update-progress.png)
 
@@ -76,16 +76,40 @@ Der Updater akzeptiert derzeit nur Releases, die Format 1 lesen und weiter schre
 
 Eine Sicherung schützt nicht vor jedem möglichen Fehler eines neuen Programms. Deshalb bleiben Originaldateien, frühere App und Prüfmanifest erhalten. Es gibt keine automatische Löschung von Nutzerdaten im Updateablauf.
 
+## Releases bauen
+
+Der öffentliche Updateschlüssel steht in `src-tauri/tauri.conf.json`. Der private Schlüssel gehört niemals ins Repository oder App-Paket. Beim lokalen Einrichten wurde er außerhalb des Repositories unter `~/.config/storycore/release-signing.key` abgelegt. Diesen Schlüssel separat sicher sichern; bei Verlust können bestehende Installationen neue Pakete nicht mehr prüfen.
+
+```sh
+export TAURI_SIGNING_PRIVATE_KEY="$HOME/.config/storycore/release-signing.key"
+export TAURI_SIGNING_PRIVATE_KEY_PASSWORD=""
+# package.json/Cargo synchron halten; Datenrichtlinie für genau diese Version prüfen.
+npx tauri build --bundles app
+npm run updates:manifest
+```
+
+Ergebnisse unter `src-tauri/target/release/bundle/macos/`:
+
+- `StoryCore.app.tar.gz`
+- `StoryCore.app.tar.gz.sig`
+- `storycore-update.json`
+
+Alle drei Dateien gemeinsam im öffentlichen Download-Repository an das passende GitHub-Release `v<Version>` anhängen. Ein Release erst als Entwurf vorbereiten, Assets vollständig hochladen und anschließend veröffentlichen. Der Updater bezieht Release und Assets über die feste GitHub-API, ohne Zugang zum privaten Quellcode. Veröffentliche nicht nur den Commit: Der Updater benötigt diese Release-Dateien.
+
+`npm run desktop:build` erzeugt zusätzlich den normalen Installer samt Dokumentation; dessen bestehende Prüfung verlangt PDF-Anleitungen mit passender Versionsnummer. Die neue Update-Funktion ist unabhängig von dieser PDF-Verpackung. Ohne Release-Schlüssel kann ein Entwickler einen lokalen Build mit deaktiviertem `bundle.createUpdaterArtifacts` erstellen; dieser Build ist kein veröffentlichbares Update.
+
+Native Installation: Tauri-Updater für Signaturprüfung und Paketinstallation; eigene vorgelagerte Sicherung sowie Wiederherstellung bei einem erkannten Installationsfehler. Der interne Download-Endpunkt ist ausschließlich auf `127.0.0.1`, mit dem zufälligen Desktop-Sitzungstoken geschützt und ohne Systemproxy. Externe Downloads verwenden HTTPS. Es gibt keine allgemeinen Updater-Rechte für JavaScript und keine frei wählbaren Update-URLs.
+
+Referenzen: [Tauri-Updater](https://v2.tauri.app/plugin/updater/), [GitHub Release-Assets](https://docs.github.com/en/rest/releases/assets), [Fine-grained Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+
 ## Datenänderungen in 2.0.4
 
 Optionale Anhänge werden in Chat und Vergleich gespeichert; Projektwissen unterstützt zusätzlich Tabellen. Das Datenformat bleibt 1. Bestehende Daten werden weder migriert noch gelöscht. Originaldateien sind Bestandteil der Datensicherung. Die reguläre Version 2.0.4 enthält Installer, beide neuen PDF-Anleitungen und signierte Update-Artefakte.
 
-## Reguläre Freigabe von 2.0.4
+## Reguläre Freigabe von 2.0.7
 
-2.0.4 wird im Standardkanal **Nur stabile Versionen** angeboten. **Jetzt prüfen** umgeht die tägliche Wartefrist. Ein Vorabversions-Opt-in ist nicht erforderlich. GitHubs Latest zeigt ebenfalls auf 2.0.4; 1.7.1 ist nur noch im Archiv. App-Paket und Datenformat bleiben bei dieser Freigabe unverändert.
+2.0.7 wird im Standardkanal **Nur stabile Versionen** angeboten. **Jetzt prüfen** umgeht die tägliche Wartefrist. Ein Vorabversions-Opt-in ist nicht erforderlich. GitHubs Latest zeigt ebenfalls auf 2.0.7. Die öffentliche Versionsübersicht beginnt bei 2.0.2. App-Paket und Datenformat bleiben bei dieser Freigabe unverändert.
 
-## Freigaberegel und stabile Vorgängerversion
+## Freigaberegel
 
-Neue Releases sind grundsätzlich **Beta** (GitHub: Pre-release). Nur die ausdrückliche Freigabe durch YorkStack macht eine Version stabil; abgeschlossene Tests allein reichen nicht. Beta-Releases setzen GitHubs Latest nicht um. Der Standardkanal bleibt **Nur stabile Versionen**; Betas erfordern **Auch Vorabversionen** im Update-Menü.
-
-Aktuell stabil: **2.0.4**. Stabile Vorgängerversion: **2.0.2**, die erste öffentliche Ausgabe mit dem öffentlichen Updater. Intern war die Update-Funktion bereits in 2.0.1 enthalten, damals noch mit privater Repository-Adresse. Der Vorgänger bleibt ein historischer Download und wird nicht als Downgrade angeboten.
+Neue Releases werden als Beta veröffentlicht. Nur die ausdrückliche Freigabe des Eigentümers macht sie stabil und für den normalen Update-Kanal verfügbar. Standard bleibt **Nur stabile Versionen**. **Auch Vorabversionen** schaltet Betas ausdrücklich hinzu. Derzeit: **2.0.7 aktuell stabil**, **2.0.2 stabiler Vorgänger** (erster öffentlicher Updater). Interne 2.0.1 verwendete noch das private Repository. Ältere Versionen werden nicht automatisch als Downgrade installiert.

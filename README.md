@@ -28,6 +28,8 @@ Die Pakete sind **nicht Apple-notarisiert**. macOS kann eine Freigabe unter Date
 
 **Bebilderte PDF-Anleitungen** liegen in jedem Installer und als einzelne Assets beim jeweiligen Release: [1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) · [2.0.2](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.2).
 
+![Startseite der Vorabversion 2.0.2 mit leerer Bibliothek](docs/guide-assets/start-2.0.png)
+
 ## Daten und Updates
 
 Eine neue Installation beginnt leer, mit neutralen Generierungsprofilen. Keine privaten Geschichten, Charaktere, Zugangsdaten oder Modellgewichte sind enthalten. Eine Neuinstallation auf demselben Mac behält vorhandene lokale Daten. Die Modellliste kommt aus der verbundenen Ollama-Installation; Modelle sind separat auf dem Rechner gespeichert.

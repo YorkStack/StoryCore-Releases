@@ -1,12 +1,12 @@
 # StoryCore auf dem Mac installieren
 
-Stand: **2.0.2-Vorabversion / 1.7.1 stabil · 7. Oktober 2026**. Für Anwender ist der fertige Download vorgesehen; ein eigener Build ist optional.
+Stand: **2.0.4-Vorabversion / 1.7.1 stabil · 7. Oktober 2026**. Für Anwender ist der fertige Download vorgesehen; ein eigener Build ist optional.
 
-**Bebilderte Kurzfassungen als PDF:** [Download und Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.2/StoryCore-Installation-Mac.pdf) · [Erste Schritte (6 Seiten für 1.7.1, 8 Seiten für 2.0.2)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.2/StoryCore-Erste-Schritte.pdf). Beide PDFs liegen auch direkt im Installer-ZIP/DMG und als einzelne Release-Downloads. Die App-Abbildungen verwenden eine separate neutrale Demo-Bibliothek; simulierte Vergleichsantworten sind kein Benchmark. Diese Beispiele werden nicht in die App eingebaut.
+**Bebilderte Kurzfassungen als PDF:** [Download und Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.4/StoryCore-Installation-Mac.pdf) · [Erste Schritte (9 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.4/StoryCore-Erste-Schritte.pdf). Beide PDFs liegen auch direkt im Installer-ZIP/DMG und als einzelne Release-Downloads. Die App-Abbildungen verwenden eine separate neutrale Demo-Bibliothek; simulierte Vergleichsantworten sind kein Benchmark. Diese Beispiele werden nicht in die App eingebaut.
 
 ## Fertiges Installationspaket von GitHub
 
-1. Öffne [den neuesten StoryCore-Release](https://github.com/YorkStack/StoryCore-Releases/releases/latest). Die Downloads sind öffentlich und benötigen keinen GitHub-Zugang. Für den neuen Projektarbeitsbereich wähle ausdrücklich [2.0.2 (Vorabversion)](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.2).
+1. Öffne [den neuesten StoryCore-Release](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4). Die Downloads sind öffentlich und benötigen keinen GitHub-Zugang. Für den neuen Projektarbeitsbereich wähle ausdrücklich [2.0.4 (Vorabversion)](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4).
 2. Lade unter **Assets** das zur Version passende `StoryCore_<Version>_Mac-Installer.zip` herunter. Verwende für die Installation **nicht** GitHubs automatisch angebotene „Source code“-Archive.
 3. Entpacke das ZIP und doppelklicke auf **Install-StoryCore.command**. Es öffnet sich ein Terminalfenster mit der geführten Prüfung und Installation. Die Datei `StoryCore.app` muss daneben liegen.
 4. Lies die Prüfung. Falls Ollama fehlt oder noch nicht läuft, wähle einen der angebotenen Wege. Installiere anschließend StoryCore und öffne die App auf Wunsch direkt aus der Routine.
@@ -37,17 +37,17 @@ Die Routine bietet an:
 - **Offiziellen Download öffnen:** [Ollama für macOS](https://ollama.com/download/mac) installieren und Ollama öffnen; danach die StoryCore-Routine erneut starten.
 - **Homebrew-Anleitung anzeigen:** Falls Homebrew bereits installiert ist, kannst du selbst `brew install --cask ollama` ausführen. Die Routine installiert weder Homebrew noch zusätzliche Software ungefragt.
 - **Vorhandene Ollama-App starten** und anschließend die Verbindung erneut prüfen.
-- **Ohne Ollama fortfahren:** StoryCore lässt sich schon installieren. Später Ollama starten oder unter **App verwalten → Modellserver** eine lokale OpenAI-kompatible Laufzeit konfigurieren. Ohne erreichbaren Modellserver funktionieren Bibliotheken und Exporte, aber keine LLM-Ausgaben.
+- **Ohne Ollama fortfahren:** StoryCore lässt sich schon installieren. Später Ollama starten oder unter **Einstellungen → Modellserver** eine lokale OpenAI-kompatible Laufzeit konfigurieren. Ohne erreichbaren Modellserver funktionieren Bibliotheken und Exporte, aber keine LLM-Ausgaben.
 
 Ein anderer Ollama-Port oder ein eigener Installationspfad kann vom Standardcheck unentdeckt bleiben. Das ist kein Grund, Ollama ein zweites Mal zu installieren: Wähle „ohne Ollama fortfahren“ und konfiguriere die vorhandene lokale Adresse in StoryCore. Die Routine ändert keine bestehenden Server-Einstellungen und lädt keine Modellgewichte.
 
-Ollama verlangt aktuell macOS 14 oder neuer, siehe [Herstelleranforderungen](https://docs.ollama.com/macos). Tauri deklariert im Projekt zwar ein Mindestziel von macOS 11, dies ist **keine Zusage**, dass das vollständige aktuelle Paket auf älteren Systemen läuft. Der verifizierte Rechner und Testumfang stehen im [Teststand](../README.md#transparenz-und-lizenzen).
+Ollama verlangt aktuell macOS 14 oder neuer, siehe [Herstelleranforderungen](https://docs.ollama.com/macos). Tauri deklariert im Projekt zwar ein Mindestziel von macOS 11, dies ist **keine Zusage**, dass das vollständige aktuelle Paket auf älteren Systemen läuft. Der verifizierte Rechner und Testumfang stehen im [Prüfprotokoll](VERIFICATION.md).
 
 ## Internetrecherche optional einrichten
 
-Ollama und die Textgenerierung bleiben lokal. Für Websuche unter **App verwalten → Web-Recherche** Tavily, Serper oder Brave wählen, dort der Kontoanleitung folgen und den eigenen API-Schlüssel eintragen. **Web-Recherche erlauben** aktivieren und speichern. Es wird weder ein Browser noch ein Container zusätzlich installiert; der Installer legt keine Suchkonten an und bringt keine Zugangsdaten mit.
+Ollama und die Textgenerierung bleiben lokal. Für Websuche unter **Einstellungen → Web-Recherche** Tavily, Serper oder Brave wählen, dort der Kontoanleitung folgen und den eigenen API-Schlüssel eintragen. **Web-Recherche erlauben** aktivieren und speichern. Es wird weder ein Browser noch ein Container zusätzlich installiert; der Installer legt keine Suchkonten an und bringt keine Zugangsdaten mit.
 
-Anschließend vor einer Anfrage unter Schreiben oder Modellvergleich die Recherche einschalten, Suchbegriffe eingeben, **Im Web suchen**, Quellen prüfen und senden. Nur die Suchbegriffe gehen an den Suchdienst. Anbieter können Kontingente und Kosten vorgeben. Einrichtung, Schlüsseltrennung und Fehlersuche: [Internetrecherche](WEB-RECHERCHE.md); vollständiger Einstieg: [Nutzung](NUTZUNG.md).
+Anschließend vor einer Anfrage im Chat, in Stories, Projektgesprächen oder im Modellvergleich die Recherche einschalten, Suchbegriffe eingeben, **Im Web suchen**, Quellen prüfen und senden. Nur die Suchbegriffe gehen an den Suchdienst. Anbieter können Kontingente und Kosten vorgeben. Einrichtung, Schlüsseltrennung und Fehlersuche: [Internetrecherche](WEB-RECHERCHE.md); vollständiger Einstieg: [Nutzung](NUTZUNG.md).
 
 ## macOS fragt nach einer Freigabe
 

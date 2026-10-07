@@ -1,8 +1,9 @@
 # Kontext, Verknüpfungen und Verwaltung
 
-Stand: **StoryCore 1.7.1 · 6. Oktober 2026**. [Dokumentationsübersicht](../README.md#anleitungen).
+Aktueller Funktionsstand: **2.0.4 Vorabversion · 7. Oktober 2026**.
+[Dokumentationsübersicht](../README.md#anleitungen).
 
-## App verwalten
+## Einstellungen
 
 Die globale Verwaltung ist links in der Navigation erreichbar. Konfiguration liegt in `settings.json` im bisherigen Datenstamm. Sie wird nicht in Projekt-ZIPs exportiert.
 
@@ -77,3 +78,7 @@ Die Modellverwaltung filtert Hugging-Face-GGUFs nach Textgenerierung, Embeddings
 ## Internetquellen neben Charakteren und Lore
 
 Suchauszüge sind zusätzlicher Kontext für die aktuelle Frage. Sie ersetzen weder Charakterkern noch Lorebook. Das Recherche-Budget zählt zum gesamten Modellfenster; kürzere Auszüge lassen mehr Platz für Verlauf und Antwort. Webinhalte sind fremde Daten und werden nicht als Handlungsanweisungen behandelt. Die Schreibhilfe in den Bibliothekseditoren recherchiert nicht selbst im Internet. Für Recherche zuerst im Chat suchen und die belegten Fakten anschließend gezielt in einen Eintrag übernehmen.
+
+## Dokumentkontext und neue Navigation · 2.0.4
+
+Charaktere, Personas und Lorebooks liegen unter **Storytelling**. Globale Budgets unter **Einstellungen**; die rechte Leiste enthält Einstellungen für den aktuellen Chat/Story/Vergleich. Projektwissen hat ein gemeinsames Budget für Rolle, Profil, Erinnerungen und Auszüge. Gesprächs- und Vergleichsanhänge haben ein eigenes Budget (Standard 2.400 Tokens), zusätzlich begrenzt durch den verbleibenden Kontext. Ausgewählt werden passende Textabschnitte, nicht grundsätzlich ganze Dateien. [Dateien in allen Arbeitsbereichen](NUTZUNG.md#dateien-per-drag-and-drop).

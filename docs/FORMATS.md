@@ -1,6 +1,7 @@
 # Portable Formate
 
-Stand: **StoryCore 1.7.1 · 6. Oktober 2026**. [Dokumentationsübersicht](../README.md#anleitungen).
+Aktueller Funktionsstand: **2.0.4 Vorabversion · 7. Oktober 2026**.
+[Dokumentationsübersicht](../README.md#anleitungen).
 
 Recherchierte Primärquellen, 28. September 2026:
 
@@ -27,7 +28,7 @@ Stand-alone-Dateien: `{"spec":"lorebook_v3","data":Lorebook}` gemäß CCv3. Char
 
 Mehrere `keys` werden mit ODER verknüpft. `selective` plus `secondary_keys` fügt eine zusätzliche ODER-Bedingung hinzu. Matching ist Unicode-Substring-Matching, standardmäßig ohne Beachtung der Groß-/Kleinschreibung. Disabled überschreibt constant. Leere Inhalte und Schlüssel werden ignoriert. Niedrigere insertion_order erscheint früher im Prompt; größere priority gewinnt bei Budgetkonflikten. before_char wird vor dem Character-Abschnitt eingefügt, andere Einträge im LORE-Abschnitt.
 
-Budgetierung und Nachladen sind in **App verwalten** einstellbar: standardmäßig 800 Lore-Tokens insgesamt, 240 je Eintrag, fünf Einträge, eine Nachladeebene und vier gescannte Nachrichten. Schema-Grenzen sind maximal 16.384 Lore-Tokens, 4.096 pro Eintrag, 64 Einträge und vier Ebenen. Der verbleibende Platz im Kontext sowie Buchbudgets können diese Grenzen weiter reduzieren. Keyword-Rekursion ist standardmäßig aus. Explizite Verknüpfungen, Ein-/Ausschluss und Geheimnis-Freigaben werden zusätzlich berücksichtigt; Details unter [Kontextsteuerung](CONTEXT.md).
+Budgetierung und Nachladen sind in **Einstellungen** einstellbar: standardmäßig 800 Lore-Tokens insgesamt, 240 je Eintrag, fünf Einträge, eine Nachladeebene und vier gescannte Nachrichten. Schema-Grenzen sind maximal 16.384 Lore-Tokens, 4.096 pro Eintrag, 64 Einträge und vier Ebenen. Der verbleibende Platz im Kontext sowie Buchbudgets können diese Grenzen weiter reduzieren. Keyword-Rekursion ist standardmäßig aus. Explizite Verknüpfungen, Ein-/Ausschluss und Geheimnis-Freigaben werden zusätzlich berücksichtigt; Details unter [Kontextsteuerung](CONTEXT.md).
 
 Referenzen verwenden `<Buch-ID>:<Eintrags-ID>`; wenn eine ältere Datei keine Eintrags-ID hat, dient zunächst deren Index als Ersatz. Beim Speichern werden fehlende IDs ergänzt. Die Buch-ID ist eine lokale Dateireferenz; Projektimport ordnet sie neu zu.
 
@@ -57,3 +58,7 @@ LLM-Gewichte sind keine Projektbestandteile und werden weder als Character Card 
 Antworten und Vergleiche können einen `research`-Snapshot mit Anbieter, Suchbegriffen, Abrufzeitpunkt, Quellen-IDs, Titeln, URLs, Textauszügen und geschätzten Tokens enthalten. Quellen werden nicht beim Öffnen automatisch nachgeladen. Historische Anbieterkennungen bleiben importierbar, aktivieren aber keine Suchanbindung.
 
 Tavily-/Serper-Quellen bleiben mit der Antwort gespeichert. Brave-Auszüge und vollständige Promptkopien werden ohne bestätigte vertragliche Speicherrechte vor Speicherung/Export entfernt; die Modellantwort bleibt erhalten und kann Quellen zitieren. API-Schlüssel liegen ausschließlich in der lokalen Konfiguration und gehören nicht in Chat-, Karten- oder Projekt-Exporte. Ein manuelles Backup von `settings.json` kann hingegen Zugangsdaten enthalten.
+
+## Dokumentanhänge · 2.0.4
+
+Chat und Vergleich enthalten optionale Anhänge einschließlich Originalbytes (Base64), Textblöcken, Dateiname, Größe, Format und Aktivierung. Ein gemeinsames Tokenbudget steuert die Auswahl. Im Vergleich liegt dieser Kontext einmal unter `chat`; einzelne gespeicherte Ergebnisse müssen ihn nicht duplizieren. Beim Laden werden frühere Resultate mit eigenem Kontext weiterhin unterstützt. JSON-Exporte können Originaldateien und private Inhalte enthalten. Projektarchive enthalten das Projektwissen und zugeordnete Gesprächsanhänge. [Formate, Limits und Bedienung](NUTZUNG.md#dateien-per-drag-and-drop).

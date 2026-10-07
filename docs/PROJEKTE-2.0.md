@@ -1,6 +1,6 @@
 # Projekte und persönlicher Kontext in StoryCore 2.0
 
-Vorabversion 2.0.2 vom 7. Oktober 2026. [Zur Dokumentationsübersicht](../README.md).
+Vorabversion 2.0.4 vom 7. Oktober 2026. [Zur Dokumentationsübersicht](../README.md).
 
 ## Start und Navigation
 
@@ -26,11 +26,12 @@ Das Profil lässt sich ändern oder vollständig leeren. Es wird nicht automatis
 
 ## Wissen hinzufügen
 
-Unter **Wissen → Dateien hinzufügen** werden MD, UTF-8-TXT, PDF und DOCX unterstützt. Maximal 10 MB Originaldatei, 1 Mio. Zeichen und 500 Textabschnitte. Alte .doc-Dateien bitte zuerst als DOCX speichern.
+Dateien in das geöffnete Projekt ziehen oder **Wissen → Dateien hinzufügen** wählen. Die Ablage funktioniert auch aus Übersicht, Gespräche und Ergebnisse und öffnet anschließend Wissen. Unterstützt werden MD, UTF-8-TXT, PDF, DOCX, XLSX, CSV und TSV. Maximal 10 MB Originaldatei, 1 Mio. Zeichen und 500 Textabschnitte. Alte .doc-Dateien bitte zuerst als DOCX speichern.
 
 - PDF: Text mit Seitenangaben. Gescannten Seiten ohne Textschicht fehlt OCR. Bei teilweise gescannten PDFs kann nur vorhandener Text eingelesen werden; den Text über „Eingelesenen Text prüfen“ kontrollieren.
 - DOCX: Text des Hauptdokuments mit Absatzangaben. Bilder, Diagramme, Kopf-/Fußzeilen und Kommentare werden nicht als Fachwissen interpretiert. Layout und Tabellenstruktur sind im Textauszug nicht originalgetreu.
-- MD/TXT: Text bleibt unverändert als Wissensgrundlage erhalten.
+- XLSX: Tabellenblatt, Zeilen, Zelladressen und gespeicherte Zellwerte. Keine Formelberechnung; keine Makros, Bilder oder Diagramme. Alte XLS-Dateien vorher als XLSX speichern.
+- MD/TXT/CSV/TSV: Text als Wissensgrundlage; Trennzeichen bleiben erkennbar.
 
 Die Originaldatei bleibt lokal gespeichert und ist über **Original** exportierbar. Das Häkchen schließt eine Datei in die Kontextsuche ein oder daraus aus. Entfernen löscht sie aus dem Projekt; vorhandene Antwort-Snapshots enthalten weiterhin ihre früher verwendeten Auszüge.
 
@@ -67,6 +68,10 @@ Unter **Übersicht → Projekt verwalten und exportieren** liegen Archivieren, W
 Profile, Quelldateien und Antworten bleiben lokal. Nur ausdrücklich gestartete Internetrecherche übermittelt die angezeigten Suchbegriffe an den gewählten Anbieter. Lokale Dateien werden dadurch nicht automatisch hochgeladen. Auch lokale Modelle können Quellen falsch verstehen oder Zusammenfassungen unvollständig erstellen. Die Quellenanzeige macht die tatsächlichen Auszüge prüfbar.
 
 
-## Startreihenfolge und Updates · 2.0.1
+## Anhänge im Gespräch oder Vergleich
 
-Die Startseite bietet **Chat beginnen**, **Projekt erarbeiten**, **Story erstellen**, **Modelle vergleichen** in dieser Reihenfolge. Links unten öffnet **Updates** die tägliche/manuelle Versionsprüfung und die Installation mit Datensicherung. Siehe [Updates](UPDATES.md).
+**Dateien anhängen** im Projektgespräch gilt nur dort. Gemeinsame Grundlagen stattdessen ins **Projektwissen** ziehen. Im Projektvergleich können zusätzliche Anhänge aufgenommen werden; beide Modelle erhalten dieselben ausgewählten Auszüge. Pro Gespräch bzw. Vergleich maximal sechs Dateien, zusammen 10 MB. [Formate und Grenzen](NUTZUNG.md#dateien-per-drag-and-drop).
+
+![Projektwissen mit neutralen Beispieldateien](guide-assets/204-wissen.png)
+
+**Updates** links unten prüft täglich oder manuell und installiert nach Datensicherung. [Update-Anleitung](UPDATES.md).

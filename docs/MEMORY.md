@@ -1,6 +1,7 @@
 # Kontextspeicher für lange Geschichten
 
-Stand: **StoryCore 1.7.1 · 6. Oktober 2026**. [Dokumentationsübersicht](../README.md#anleitungen).
+Aktueller Funktionsstand: **2.0.4 Vorabversion · 7. Oktober 2026**.
+[Dokumentationsübersicht](../README.md#anleitungen).
 
 StoryCore bietet ab **65 %** geplanter Kontextbelegung die Komprimierung direkt
 über dem Eingabefeld an. Ab **80 %** wird der Hinweis dringlicher. Die Anzeige
@@ -78,3 +79,7 @@ Embedding-Modelle im Katalog sind keine Voraussetzung für diese Funktion: Die K
 ## Komprimierung und Web-Recherche
 
 Komprimieren führt keine neue Internetsuche aus. Antworten mit Recherche gehen als Teil des älteren Gesprächs in die Zusammenfassung ein; die Kurzfassung ist deshalb keine vollständige Quellenablage. Der Originalverlauf bleibt erhalten, gespeicherte Quellen unterliegen den Regeln des jeweiligen Anbieters. Für zeitabhängige Fakten vor der Fortsetzung erneut explizit recherchieren. Quellen-Tokenbudget und Antwortreserve müssen weiterhin in das aktuelle Kontextfenster passen.
+
+## Projektgedächtnis und Dateien · 2.0.4
+
+Der Kontextspeicher komprimiert den Verlauf eines Gesprächs. Das Projektgedächtnis enthält dagegen ausdrücklich bestätigte Erkenntnisse aus mehreren Aufgaben. Anhänge und Projektwissen bleiben separat erhalten und werden anhand der nächsten Frage erneut innerhalb der Budgets ausgewählt. Komprimieren löscht weder Originaldateien noch den sichtbaren Verlauf. Entfernen eines Anhangs bereinigt keine historischen Prompt-Snapshots. [Projektablauf](PROJEKTE-2.0.md).

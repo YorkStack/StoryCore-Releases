@@ -29,6 +29,27 @@ Die automatisch angebotenen „Source code“-Archive enthalten hier nur die Dok
 
 Die Pakete sind **nicht Apple-notarisiert**. macOS kann eine Freigabe unter Datenschutz & Sicherheit verlangen; verwaltete Macs benötigen eventuell eine IT-Freigabe. Die separate kryptografische Updatesignatur ersetzt keine Apple-Notarisierung. [Installation und Gatekeeper](docs/INSTALLATION-MAC.md).
 
+## Paket-Downloads
+
+Gezählt werden Downloads der Installer-ZIPs, DMGs und Update-Pakete je veröffentlichter Version. Wiederholte Downloads und Tests zählen mit; die Zahlen zeigen **keine eindeutigen Nutzer oder erfolgreichen Installationen**. PDFs, Prüfsummen, Lizenzen und Update-Abfragen sind nicht enthalten.
+
+<!-- download-stats:start -->
+
+| Version | Status | Installer-ZIP | DMG | Update-Paket | Gesamt |
+| --- | --- | ---: | ---: | ---: | ---: |
+| [2.0.8](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8) | Stabil | 0 | 0 | 1 | 1 |
+| [2.0.7](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7) | Stabil | 1 | 0 | 2 | 3 |
+| [2.0.6](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6) | Beta | 0 | 0 | 1 | 1 |
+| [2.0.5](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) | Beta | 0 | 0 | 1 | 1 |
+| [2.0.4](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | Stabil | 0 | 0 | 2 | 2 |
+| [2.0.2](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.2) | Stabil | 1 | 0 | 1 | 2 |
+
+Datenstand (zuletzt geändert): 07.10.2026 20:14 UTC.
+
+<!-- download-stats:end -->
+
+Automatische Prüfung täglich gegen **05:37 UTC**, nach Veröffentlichung/Änderung eines Releases und bei Änderungen an dieser README. GitHub kann geplante Läufe verzögern. Unveränderte Zahlen erzeugen keinen neuen Commit; der Datenstand bleibt dann erhalten. [Letzte Prüfung oder manuell starten: Actions → Download statistics → Run workflow](https://github.com/YorkStack/StoryCore-Releases/actions/workflows/download-stats.yml). [Technik und Wartung](docs/DOWNLOAD-STATISTIK.md).
+
 ## Neu in 2.0.8
 
 **Modelle ohne Namenseingabe entdecken:** Beim Öffnen von „Hugging Face durchsuchen“ erscheinen beliebte GGUF-Modelle passend zum Modelltyp. Der Typwechsel lädt die Liste automatisch neu. Dateigrößen und geschätzter RAM-Bedarf helfen bei der Auswahl; der RAM-Filter bleibt optional. Eine Variante auswählen und erst danach bewusst herunterladen.

@@ -1,6 +1,6 @@
 # StoryCore für macOS
 
-Lokale Sprachmodelle mit Ollama nutzen: chatten, Geschichten entwickeln und Modelle vergleichen. Die Vorabversion 2.0.4 ergänzt Projektarbeitsbereiche mit Fachwissen, Dokumenten und einem freiwilligen persönlichen Profil.
+Lokale Sprachmodelle mit Ollama nutzen: chatten, Geschichten entwickeln und Modelle vergleichen. Version 2.0.4 enthält Projektarbeitsbereiche mit Fachwissen, Dokumenten und einem freiwilligen persönlichen Profil.
 
 Dieses öffentliche Repository enthält **Downloads und Dokumentation**. Der StoryCore-Quellcode bleibt privat. Die App darf kostenlos privat und geschäftlich genutzt werden. Andere Nutzer bitte auf die offiziellen Downloads verweisen; die zentrale Installation in der eigenen Organisation ist erlaubt. [Nutzungsbedingungen](LICENSE.txt).
 
@@ -8,16 +8,16 @@ Dieses öffentliche Repository enthält **Downloads und Dokumentation**. Der Sto
 
 **[StoryCore 2.0.4 für den Mac herunterladen (Installer-ZIP)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.4/StoryCore_2.0.4_Mac-Installer.zip)**
 
-**Neuester veröffentlichter Funktionsstand · Vorabversion.** Enthält die neue Oberfläche, Chat, Projekte, Storytelling, Modellvergleich und Dokumentanhänge per Drag-and-drop. Frühere 2.0.x-Stände sind damit überholt.
+**Aktuelle reguläre Version.** Enthält die neue Oberfläche, Chat, Projekte, Storytelling, Modellvergleich und Dokumentanhänge per Drag-and-drop. Frühere 2.0.x-Stände sind damit überholt.
 
 ZIP entpacken und **Install-StoryCore.command** doppelklicken. Die App muss neben der Routine liegen. [Alle Downloads zu 2.0.4, einschließlich DMG und PDF-Anleitungen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4).
 
 | Version | Status | Verwendung |
 | --- | --- | --- |
-| [**2.0.4**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | **Aktuelle Vorabversion** | Neue Oberfläche, Projekte, Dokumentanhänge und Updates |
-| [1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) | Ältere stabile Version | Bisherige Oberfläche ohne die neuen Projektarbeitsbereiche und Dokumentanhänge |
+| [**2.0.4**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | **Aktuell · regulär** | Neue Oberfläche, Projekte, Dokumentanhänge und Updates |
+| [1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) | Archiv · abgelöst | Bisherige Oberfläche ohne die neuen Projektarbeitsbereiche und Dokumentanhänge |
 
-**Warum zeigt GitHub bei „Latest“ noch 1.7.1?** 2.0.4 ist als Vorabversion veröffentlicht. GitHubs stabiler Download-Link und der stabile Update-Kanal bleiben deshalb bei 1.7.1. Für die neuen Funktionen den direkten **2.0.4-Link oben** verwenden oder in der App **Updates → Auch Vorabversionen → Jetzt prüfen** wählen.
+**Updates:** 2.0.4 ist als reguläres Release veröffentlicht und wird im normalen Kanal **Nur stabile Versionen** angeboten. In der App **Updates → Jetzt prüfen** wählen. Die Freigabe von Vorabversionen ist dafür nicht erforderlich. GitHubs **Latest** verweist auf 2.0.4; 1.7.1 bleibt ausschließlich im Versionsarchiv.
 
 Die automatisch angebotenen „Source code“-Archive enthalten hier nur die Dokumentation und sind keine App-Installer.
 

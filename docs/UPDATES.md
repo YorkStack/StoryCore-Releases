@@ -1,6 +1,6 @@
 # StoryCore aktualisieren
 
-Stand: 2.0.2, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
+Stand: 2.0.4, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
 
 ## Für Benutzer
 
@@ -58,3 +58,6 @@ Der Updater akzeptiert derzeit nur Releases, die Format 1 lesen und weiter schre
 
 Eine Sicherung schützt nicht vor jedem möglichen Fehler eines neuen Programms. Deshalb bleiben Originaldateien, frühere App und Prüfmanifest erhalten. Es gibt keine automatische Löschung von Nutzerdaten im Updateablauf.
 
+## Datenänderungen in 2.0.4
+
+Optionale Anhänge werden in Chat und Vergleich gespeichert; Projektwissen unterstützt zusätzlich Tabellen. Das Datenformat bleibt 1. Bestehende Daten werden weder migriert noch gelöscht. Originaldateien sind Bestandteil der Datensicherung. Die öffentliche Vorabversion 2.0.4 enthält Installer, beide neuen PDF-Anleitungen und signierte Update-Artefakte.

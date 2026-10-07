@@ -1,6 +1,7 @@
-# Web-Recherche in StoryCore 1.7.1
+# Web-Recherche in StoryCore 2.0.4
 
-Unter **App verwalten → Web-Recherche** den Anbieter wählen, dessen API-Schlüssel eintragen, **Web-Recherche erlauben** aktivieren und **Einstellungen speichern**. Die Recherche ist anfangs ausgeschaltet. Keine Browserbedienung, kein Container und keine zusätzliche Suchsoftware erforderlich.
+Aktueller Funktionsstand: **2.0.4 Vorabversion · 7. Oktober 2026**.
+Unter **Einstellungen → Web-Recherche** den Anbieter wählen, dessen API-Schlüssel eintragen, **Web-Recherche erlauben** aktivieren und **Einstellungen speichern**. Die Recherche ist anfangs ausgeschaltet. Keine Browserbedienung, kein Container und keine zusätzliche Suchsoftware erforderlich.
 
 ## Tavily: Konto und Schlüssel
 
@@ -32,7 +33,7 @@ Bestehende SearXNG-Einstellungen bleiben kompatibel; eine bereits konfigurierte 
 
 ## Suchen und Quellen verwenden
 
-1. Unter **Schreiben** oder **Modellvergleich** die Web-Recherche einschalten.
+1. Im Chat, in Stories, Projektgesprächen oder im **Modellvergleich** die Web-Recherche einschalten.
 2. Eigene **Suchbegriffe** eingeben und **Im Web suchen** anklicken.
 3. Quellen und Auszüge aufklappen und prüfen.
 4. Die eigentliche Frage senden bzw. den Vergleich starten. Beide Vergleichsmodelle erhalten denselben vorbereiteten Quellenkontext.
@@ -51,15 +52,28 @@ Es werden ausschließlich die Suchbegriffe an den ausgewählten Dienst übertrag
 - Suchentwürfe gelten maximal 30 Minuten und nur für ihren Chat. Einstellungsänderungen verwerfen diese Entwürfe.
 - Beim Laden einer nicht mehr unterstützten Anbieter-Einstellung wird Tavily gewählt und die Recherche ausgeschaltet. Andere Einstellungen und historische Quellen bleiben erhalten.
 
-## Teststand
+## Prüffälle und Live-Test
 
-Anbieteranbindungen wurden mit simulierten Antworten getestet. Ein erfolgreicher produktiver Tavily-/Serper-Live-Test mit einem echten Schlüssel steht noch aus. Suchauszüge sind kein Echtzeit-Börsenkursfeed.
+**Aktien:** `Apple AAPL Aktienkurs Nasdaq USD Zeitstempel`. Frage: „Welcher Kurs ist durch Quellen belegt? Nenne Börsenplatz, Währung und Kurszeitpunkt. Ohne belastbare Daten keinen Echtzeitkurs behaupten.“ Suchauszüge sind kein garantierter Echtzeit-Kursfeed.
+
+**Netzwerk:** `Forward Proxy Reverse Proxy Netzwerk Unterschied`. Frage: „Erkläre Forward und Reverse Proxy anhand der Quellen.“
+
+Die automatisierten Tests verwenden ausdrücklich simulierte API-Antworten. Sie prüfen Request-Format, Schlüsseltrennung, Fehler, Budgets, Abbruch, Quellen im Chat und identische Vergleichsprompts. Es liegt noch kein erfolgreicher Live-Test mit produktiven Tavily-/Serper-Schlüsseln vor.
+
+Entwickler können einen ausdrücklich netzwerkaktiven Test starten, nachdem der jeweilige Schlüssel sicher als Umgebungsvariable `TAVILY_API_KEY`, `SERPER_API_KEY` oder `BRAVE_API_KEY` bereitgestellt wurde:
+
+```sh
+npm run test:research:live -- --provider=tavily --case=proxy
+npm run test:research:live -- --provider=serper --case=stocks
+```
+
+Ohne Schlüssel erfolgt kein Netzwerkaufruf. Der Test führt genau eine Suche aus und speichert den Bericht im ignorierten Ordner `private/research-check/`. Erfolg belegt Suchtreffer und deren Prompt-Einbindung, keine geprüfte Kursqualität und keine echte LLM-Antwort. Fehlgeschlagene Suchen haben Exitcode 2.
 
 ## Wenn die Suche nicht startet
 
 | Anzeige / Situation | Nächster Schritt |
 | --- | --- |
-| Recherche ausgeschaltet | Global unter App verwalten erlauben und speichern; danach zusätzlich im Chat/Modellvergleich einschalten. |
+| Recherche ausgeschaltet | Global unter Einstellungen erlauben und speichern; danach zusätzlich im Chat/Modellvergleich einschalten. |
 | API-Schlüssel fehlt / Zugriff verweigert | Den Schlüssel des ausgewählten Anbieters prüfen, neu einfügen und speichern. Ein Schlüssel für Tavily funktioniert nicht bei Serper. |
 | Suchlimit oder Guthaben aufgebraucht | Verbrauch und Kontingent im Anbieter-Dashboard prüfen; nicht wiederholt blind suchen. |
 | Keine verwertbaren Treffer | Suchbegriffe konkreter formulieren; gegebenenfalls Quellen-/Tokenbudget anpassen. |
@@ -68,4 +82,8 @@ Anbieteranbindungen wurden mit simulierten Antworten getestet. Ein erfolgreicher
 
 Ein Suchlauf startet keine LLM-Antwort. Erst **Senden** beziehungsweise **Vergleich starten** übergibt die geprüften Quellen an die Modelle. Nach Sendebeginn ist der Recherche-Schalter wieder aus. Ohne Web-Recherche verwendet das Modell sein vorhandenes Wissen und den lokalen Gesprächskontext.
 
-Die bebilderte [Nutzungsanleitung](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.2/StoryCore-Erste-Schritte.pdf) führt durch Einrichtung und eine Beispielrecherche. Kurzfassung als Text: [Nutzung](NUTZUNG.md).
+Die bebilderte [Nutzungsanleitung](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.4/StoryCore-Erste-Schritte.pdf) führt durch Einrichtung und eine Beispielrecherche. Kurzfassung als Text: [Nutzung](NUTZUNG.md).
+
+## In allen vier Arbeitsbereichen · 2.0.4
+
+Die Einrichtung liegt in der neuen Navigation unter **Einstellungen → Web-Recherche**. Recherche ist beim Schreiben in Chat, Story und Projektgesprächen sowie im Modellvergleich verfügbar. Lokale Dokumentanhänge werden nicht automatisch an den Suchdienst übertragen. Für Vergleiche wird die Recherche einmal ausgeführt; dieselben Auszüge gehen an alle Modelle. Dateikontext und Webquellen haben getrennte Budgets. [Aktuelle Bedienung](NUTZUNG.md).

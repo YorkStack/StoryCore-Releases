@@ -1,6 +1,6 @@
 # StoryCore aktualisieren
 
-Stand: 2.0.4, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
+Stand: 2.0.5 Beta, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
 
 ## Für Benutzer
 
@@ -15,6 +15,14 @@ Die Prüfung lädt nur Release-Metadaten. Weder Chattexte noch Dokumente, Profil
 Standardmäßig werden **nur stabile Versionen** angeboten. Unter **Updates → Versionen anbieten → Auch Vorabversionen** lassen sich Vorabversionen ausdrücklich einschalten. Danach **Jetzt prüfen** wählen. Vorabversionen können Fehler enthalten. Zurückschalten auf stabile Versionen ändert nur künftige Angebote und führt keinen Downgrade aus.
 
 Ein optionaler Token kann bei GitHub-API-Limits helfen. Ein ungültiger alter Token sollte unter **Optionaler GitHub-Zugang → Token entfernen** gelöscht werden. Tokens werden lokal mit eingeschränkten Dateirechten, aber nicht verschlüsselt gespeichert und sind in Datensicherungen enthalten. Backups niemals öffentlich weitergeben.
+
+### Grafische Fortschrittsanzeige ab 2.0.5
+
+Die Installation zeigt sechs Schritte, einen Downloadbalken mit echten Prozent- und MB-Werten, die vergangene Zeit und die nächste Aktion. Prüfung, Sicherung und Installation verwenden eine Aktivitätsanzeige ohne erfundene Prozentwerte oder Restzeit. Bei Fehlern bleibt die Meldung sichtbar; es gibt keinen automatischen Neustart. „Zurück zu Updates“ schließt die Meldung, „Erneut versuchen“ startet nach erneuter Bestätigung. Nach einem Fehler während der Wiederherstellung zuerst die genannte Sicherung prüfen.
+
+Beim ersten Update auf 2.0.5 verwendet die ältere App noch ihren bisherigen Bildschirm. Die neue Anzeige gilt für nachfolgende Updates. 2.0.5 ist Beta; 2.0.4 bleibt stabil und Latest.
+
+![Update-Anzeige mit simuliertem Downloadstand](guide-assets/205-update-progress.png)
 
 ### Installieren
 

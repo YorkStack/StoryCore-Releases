@@ -1,0 +1,49 @@
+StoryCore – Mac-Installation
+
+1. ZIP entpacken oder DMG öffnen.
+2. Install-StoryCore.command doppelklicken.
+3. Mac-/Ollama-Prüfung lesen und gewünschte Option wählen.
+4. Installation bestätigen. Vor einem Update StoryCore mit ⌘Q beenden.
+5. StoryCore öffnen. Unter „Modelle“ ein kompatibles Modell herunterladen.
+
+Voraussetzungen: Apple Silicon (M-Serie), macOS 14 oder neuer.
+Kein Node.js, Rust, Xcode oder Homebrew für die fertige App erforderlich.
+Ollama fehlt? Die Routine bietet den offiziellen Download und Alternativen an.
+Ohne Modellserver kannst du bereits Bibliotheken bearbeiten.
+
+Neue App: ~/Applications/StoryCore.app
+Bestehende Installation in /Applications: wird dort aktualisiert.
+App-Sicherungen: ~/Library/Application Support/StoryCore Installer/Backups/
+Chats und Bibliotheken bleiben erhalten; sie sind nicht Teil der App-Sicherung.
+
+Nach der Installation DMG auswerfen bzw. entpackten Paketordner entfernen,
+damit macOS nicht mehrere App-Kopien findet. Das ZIP kannst du aufbewahren.
+
+Diese Version ist ad-hoc signiert, noch nicht Apple-notarisiert.
+Bei macOS-Rückfragen die beiliegende INSTALLATION-MAC.md lesen.
+Keine globalen Sicherheitseinstellungen deaktivieren.
+
+Anleitung und aktuelle Pakete:
+https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4
+Das Download-Repository ist öffentlich; kein GitHub-Konto erforderlich.
+GitHubs „Source code“-ZIP ist kein fertiges Installationspaket.
+
+Beiliegende PDFs:
+- StoryCore-Installation-Mac.pdf: Download, fehlendes Ollama und Installation.
+- StoryCore-Erste-Schritte.pdf: neue Navigation, Modelle, Dateien, Projekte, Profil,
+  Regler, Chat, Karten, Orte, Vergleich, Web-Recherche und Updates.
+
+Internetrecherche ist optional und zunächst aus. Unter Einstellungen →
+Web-Recherche Tavily, Serper oder Brave wählen, eigenes Konto anlegen und
+den passenden API-Schlüssel speichern. Danach pro Anfrage einschalten,
+Suchbegriffe eingeben, suchen, Quellen prüfen und senden. Details: WEB-RECHERCHE.md.
+
+Öffentliche Downloads: https://github.com/YorkStack/StoryCore-Releases/releases
+Stabil: 2.0.4. Beta mit grafischer Update-Anzeige: 2.0.5.
+Betas werden in der App nur nach Aktivierung von Auch Vorabversionen angeboten.
+Kein GitHub-Konto nötig. LICENSE.txt und THIRD-PARTY-NOTICES.txt beachten.
+
+Dateien (PDF/DOCX/XLSX/MD/TXT/CSV/TSV) hineinziehen oder Dateiknopf wählen:
+Chat/Story/Projektgespräch: nur dieses Gespräch. Geöffnetes Projekt: gemeinsames
+Wissen. Modellvergleich: dieselben Auszüge für alle Modelle. Originale bleiben
+lokal und in Exporten enthalten. Details und Grenzen: NUTZUNG.md.

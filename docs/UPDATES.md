@@ -65,3 +65,9 @@ Optionale Anhänge werden in Chat und Vergleich gespeichert; Projektwissen unter
 ## Reguläre Freigabe von 2.0.4
 
 2.0.4 wird im Standardkanal **Nur stabile Versionen** angeboten. **Jetzt prüfen** umgeht die tägliche Wartefrist. Ein Vorabversions-Opt-in ist nicht erforderlich. GitHubs Latest zeigt ebenfalls auf 2.0.4; 1.7.1 ist nur noch im Archiv. App-Paket und Datenformat bleiben bei dieser Freigabe unverändert.
+
+## Freigaberegel und stabile Vorgängerversion
+
+Neue Releases sind grundsätzlich **Beta** (GitHub: Pre-release). Nur die ausdrückliche Freigabe durch YorkStack macht eine Version stabil; abgeschlossene Tests allein reichen nicht. Beta-Releases setzen GitHubs Latest nicht um. Der Standardkanal bleibt **Nur stabile Versionen**; Betas erfordern **Auch Vorabversionen** im Update-Menü.
+
+Aktuell stabil: **2.0.4**. Stabile Vorgängerversion: **2.0.2**, die erste öffentliche Ausgabe mit dem öffentlichen Updater. Intern war die Update-Funktion bereits in 2.0.1 enthalten, damals noch mit privater Repository-Adresse. Der Vorgänger bleibt ein historischer Download und wird nicht als Downgrade angeboten.

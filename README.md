@@ -14,7 +14,8 @@ ZIP entpacken und **Install-StoryCore.command** doppelklicken. Die App muss nebe
 
 | Version | Status | Verwendung |
 | --- | --- | --- |
-| [**2.0.4**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | **Aktuell · regulär** | Neue Oberfläche, Projekte, Dokumentanhänge und Updates |
+| [**2.0.4**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | **Aktuell · stabil** | Neue Oberfläche, Projekte, Dokumentanhänge und Updates |
+| [**2.0.2**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.2) | **Stabile Vorgängerversion** | Erste öffentliche Version mit Updates aus diesem Download-Repository |
 | [1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) | Archiv · abgelöst | Bisherige Oberfläche ohne die neuen Projektarbeitsbereiche und Dokumentanhänge |
 
 **Updates:** 2.0.4 ist als reguläres Release veröffentlicht und wird im normalen Kanal **Nur stabile Versionen** angeboten. In der App **Updates → Jetzt prüfen** wählen. Die Freigabe von Vorabversionen ist dafür nicht erforderlich. GitHubs **Latest** verweist auf 2.0.4; 1.7.1 bleibt ausschließlich im Versionsarchiv.
@@ -24,6 +25,15 @@ Die automatisch angebotenen „Source code“-Archive enthalten hier nur die Dok
 **Apple Silicon (M-Serie), macOS 14 oder neuer.** Kein Node.js, Rust oder Xcode nötig. Die Routine prüft den Mac und Ollama. Falls Ollama fehlt, bietet sie den [offiziellen Download](https://ollama.com/download/mac), das Starten einer vorhandenen Installation oder eine Installation vorerst ohne Ollama an. Modelle anschließend in StoryCore herunterladen.
 
 Die Pakete sind **nicht Apple-notarisiert**. macOS kann eine Freigabe unter Datenschutz & Sicherheit verlangen; verwaltete Macs benötigen eventuell eine IT-Freigabe. Die separate kryptografische Updatesignatur ersetzt keine Apple-Notarisierung. [Installation und Gatekeeper](docs/INSTALLATION-MAC.md).
+
+## Stabile Versionen und Betas
+
+**Neue Releases werden grundsätzlich als Beta veröffentlicht.** Erst nach ausdrücklicher Freigabe durch YorkStack werden sie als stabil und für den normalen Update-Kanal freigegeben. Erfolgreiche Tests allein sind keine Freigabe.
+
+- **Standard:** Die App prüft auf die neueste stabile Version, derzeit **2.0.4**.
+- **Beta testen:** Unter **Updates → Versionen anbieten → Auch Vorabversionen** ausdrücklich aktivieren. Dieser Kanal berücksichtigt zusätzlich Betas.
+- **Vorgängerversion:** **2.0.2** ist der erste öffentliche Stand mit dem öffentlichen Updater. Die interne 2.0.1 nutzte noch das private Repository und ist kein öffentlicher Einstiegsinstaller.
+- Ein Wechsel zurück zu **Nur stabile Versionen** ändert die nächsten Update-Angebote. Er installiert keine ältere App automatisch.
 
 ## Anleitungen
 

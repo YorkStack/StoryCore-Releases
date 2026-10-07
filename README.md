@@ -14,6 +14,7 @@ ZIP entpacken und **Install-StoryCore.command** doppelklicken. Die App muss nebe
 
 | Version | Status | Verwendung |
 | --- | --- | --- |
+| [2.0.5](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) | **Beta · freiwillig testen** | Grafischer Update-Fortschritt, Statusschritte und Fehlermeldungen |
 | [**2.0.4**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | **Aktuell · stabil** | Neue Oberfläche, Projekte, Dokumentanhänge und Updates |
 | [**2.0.2**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.2) | **Stabile Vorgängerversion** | Erste öffentliche Version mit Updates aus diesem Download-Repository |
 | [1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) | Archiv · abgelöst | Bisherige Oberfläche ohne die neuen Projektarbeitsbereiche und Dokumentanhänge |
@@ -25,6 +26,16 @@ Die automatisch angebotenen „Source code“-Archive enthalten hier nur die Dok
 **Apple Silicon (M-Serie), macOS 14 oder neuer.** Kein Node.js, Rust oder Xcode nötig. Die Routine prüft den Mac und Ollama. Falls Ollama fehlt, bietet sie den [offiziellen Download](https://ollama.com/download/mac), das Starten einer vorhandenen Installation oder eine Installation vorerst ohne Ollama an. Modelle anschließend in StoryCore herunterladen.
 
 Die Pakete sind **nicht Apple-notarisiert**. macOS kann eine Freigabe unter Datenschutz & Sicherheit verlangen; verwaltete Macs benötigen eventuell eine IT-Freigabe. Die separate kryptografische Updatesignatur ersetzt keine Apple-Notarisierung. [Installation und Gatekeeper](docs/INSTALLATION-MAC.md).
+
+## Optional: 2.0.5 Beta
+
+[Beta herunterladen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) oder in der App unter **Updates → Versionen anbieten → Auch Vorabversionen → Jetzt prüfen** auswählen. **2.0.4 bleibt stabil und Latest.**
+
+Die neue Update-Anzeige zeigt tatsächliche Download-Prozente und MB, verstrichene Zeit, Prüfen, Sichern, Installation und den nächsten Schritt. Fehler bleiben mit Handlungsmöglichkeiten sichtbar. Beim ersten Wechsel auf 2.0.5 erscheint noch die alte Anzeige der installierten Version; für nachfolgende Updates wird die neue Ansicht verwendet. Keine Änderung am Datenformat.
+
+![Update-Anzeige, Vorschau mit simuliertem Downloadstand](docs/guide-assets/205-update-progress.png)
+
+Die Beta enthält aktualisierte PDF-Anleitungen: [Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Installation-Mac.pdf) und [Nutzung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Erste-Schritte.pdf).
 
 ## Stabile Versionen und Betas
 

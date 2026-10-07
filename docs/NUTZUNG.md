@@ -1,6 +1,6 @@
 # StoryCore nutzen
 
-Stand: **2.0.4 Vorabversion · 7. Oktober 2026**. [Bebilderte PDF-Anleitung (9 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.4/StoryCore-Erste-Schritte.pdf) · [Installation](INSTALLATION-MAC.md).
+Stand: **2.0.5 Beta · 7. Oktober 2026**. [Bebilderte PDF-Anleitung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Erste-Schritte.pdf) · [Installation](INSTALLATION-MAC.md).
 
 ## Startseite und neue Navigation
 

@@ -1,12 +1,12 @@
 # StoryCore auf dem Mac installieren
 
-Stand: **2.0.4-Vorabversion / 1.7.1 stabil · 7. Oktober 2026**. Für Anwender ist der fertige Download vorgesehen; ein eigener Build ist optional.
+Stand: **2.0.5 Beta / 2.0.4 stabil · 7. Oktober 2026**. Für Anwender ist der fertige Download vorgesehen; ein eigener Build ist optional.
 
-**Bebilderte Kurzfassungen als PDF:** [Download und Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.4/StoryCore-Installation-Mac.pdf) · [Erste Schritte (9 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.4/StoryCore-Erste-Schritte.pdf). Beide PDFs liegen auch direkt im Installer-ZIP/DMG und als einzelne Release-Downloads. Die App-Abbildungen verwenden eine separate neutrale Demo-Bibliothek; simulierte Vergleichsantworten sind kein Benchmark. Diese Beispiele werden nicht in die App eingebaut.
+**Bebilderte Kurzfassungen als PDF:** [Download und Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Installation-Mac.pdf) · [Erste Schritte (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Erste-Schritte.pdf). Beide PDFs liegen auch direkt im Installer-ZIP/DMG und als einzelne Release-Downloads. Die App-Abbildungen verwenden eine separate neutrale Demo-Bibliothek; simulierte Vergleichsantworten sind kein Benchmark. Diese Beispiele werden nicht in die App eingebaut.
 
 ## Fertiges Installationspaket von GitHub
 
-1. Öffne [den neuesten StoryCore-Release](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4). Die Downloads sind öffentlich und benötigen keinen GitHub-Zugang. Für den neuen Projektarbeitsbereich wähle ausdrücklich [2.0.4 (Vorabversion)](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4).
+1. Öffne [den neuesten StoryCore-Release](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4). Die Downloads sind öffentlich und benötigen keinen GitHub-Zugang. Optional: [2.0.5 Beta](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) enthält die neue grafische Update-Anzeige. 2.0.4 bleibt die stabile Standardversion.
 2. Lade unter **Assets** das zur Version passende `StoryCore_<Version>_Mac-Installer.zip` herunter. Verwende für die Installation **nicht** GitHubs automatisch angebotene „Source code“-Archive.
 3. Entpacke das ZIP und doppelklicke auf **Install-StoryCore.command**. Es öffnet sich ein Terminalfenster mit der geführten Prüfung und Installation. Die Datei `StoryCore.app` muss daneben liegen.
 4. Lies die Prüfung. Falls Ollama fehlt oder noch nicht läuft, wähle einen der angebotenen Wege. Installiere anschließend StoryCore und öffne die App auf Wunsch direkt aus der Routine.

@@ -1,6 +1,6 @@
 # StoryCore nutzen
 
-Stand: **2.0.7 Beta · 7. Oktober 2026**. [Bebilderte PDF-Anleitung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Erste-Schritte.pdf) · [Installation](INSTALLATION-MAC.md).
+Stand: **2.0.7 · 7. Oktober 2026**. [Bebilderte PDF-Anleitung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Erste-Schritte.pdf) · [Installation](INSTALLATION-MAC.md).
 
 ## Startseite und neue Navigation
 
@@ -108,6 +108,6 @@ Im Vergleich dieselben Dateien wie im Chat anhängen oder hineinziehen. Vor dem 
 
 Unter **Gespeicherte Vergleiche** werden Prompt, Modellwahl und Anhänge wiederhergestellt. Noch nicht gestartete Vergleichsentwürfe sind ungespeichert; beim Wechsel wird gewarnt. Richtigkeit, Vollständigkeit und Nachvollziehbarkeit können selbst mit 1–5 bewertet und je Ergebnis gespeichert werden. **Übernehmen** erstellt einen Chat mit den Originalanhängen. Dokumentauszüge werden dabei nicht als zusätzliche sichtbare Nutzernachrichten eingefügt.
 
-## Rechte Einstellungsleiste (ab 2.0.7 Beta)
+## Rechte Einstellungsleiste (ab 2.0.7)
 
 Oben rechts neben „Modellstatus aktualisieren“ bleibt das Seitenleisten-Symbol in allen Arbeitsbereichen sichtbar. Es öffnet oder schließt die rechte Einstellungsleiste; der Tooltip zeigt „Einstellungen einblenden“ oder „Einstellungen ausblenden“. Auch nach dem Schließen über das X lässt sie sich dort wieder öffnen. Eine manuelle Auswahl bleibt während der Sitzung beim Wechsel zwischen Projekten, Chat, Story, Modellvergleich und Verwaltung erhalten. Beim nächsten App-Start gilt wieder die Standardansicht: auf breiten Fenstern beim Schreiben und Vergleichen geöffnet, auf Übersichtsseiten zunächst geschlossen.

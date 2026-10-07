@@ -1,26 +1,27 @@
 # StoryCore für macOS
 
-Lokale Sprachmodelle mit Ollama nutzen: chatten, Geschichten entwickeln und Modelle vergleichen. Version 2.0.7 enthält Projektarbeitsbereiche mit Fachwissen, Dokumenten und einem freiwilligen persönlichen Profil.
+Lokale Sprachmodelle mit Ollama nutzen: chatten, Geschichten entwickeln und Modelle vergleichen. Version 2.0.8 enthält Projektarbeitsbereiche mit Fachwissen, Dokumenten und einem freiwilligen persönlichen Profil.
 
 Dieses öffentliche Repository enthält **Downloads und Dokumentation**. Der StoryCore-Quellcode bleibt privat. Die App darf kostenlos privat und geschäftlich genutzt werden. Andere Nutzer bitte auf die offiziellen Downloads verweisen; die zentrale Installation in der eigenen Organisation ist erlaubt. [Nutzungsbedingungen](LICENSE.txt).
 
-## Aktueller Download: StoryCore 2.0.7
+## Aktueller Download: StoryCore 2.0.8
 
-**[StoryCore 2.0.7 für den Mac herunterladen (Installer-ZIP)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore_2.0.7_Mac-Installer.zip)**
+**[StoryCore 2.0.8 für den Mac herunterladen (Installer-ZIP)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.8/StoryCore_2.0.8_Mac-Installer.zip)**
 
 **Aktuelle reguläre Version.** Enthält die neue Oberfläche, Chat, Projekte, Storytelling, Modellvergleich und Dokumentanhänge per Drag-and-drop. Frühere 2.0.x-Stände sind damit überholt.
 
-ZIP entpacken und **Install-StoryCore.command** doppelklicken. StoryCore.app und install-macos.sh müssen neben der Routine liegen. [Alle Downloads zu 2.0.7, einschließlich DMG und PDF-Anleitungen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7).
+ZIP entpacken und **Install-StoryCore.command** doppelklicken. StoryCore.app und install-macos.sh müssen neben der Routine liegen. [Alle Downloads zu 2.0.8, einschließlich DMG und PDF-Anleitungen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8).
 
 | Version | Status | Verwendung |
 | --- | --- | --- |
-| [**2.0.7**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7) | **Aktuell · stabil** | Rechte Einstellungsleiste in jedem Bereich wieder öffnen; enthält die bisherigen Update-Fixes |
+| [**2.0.8**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8) | **Aktuell · stabil** | Hugging-Face-Katalog ohne Suchbegriff, Filter und RAM-Anzeige; Weblinks öffnen den Standardbrowser |
+| [2.0.7](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7) | Ältere stabile Version | Rechte Einstellungsleiste in jedem Bereich wieder öffnen |
 | [2.0.6](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6) | Ältere Beta | Updates unter /Applications mit macOS-Freigabe und reparierter Installer |
 | [2.0.5](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) | Ältere Beta | Grafischer Update-Fortschritt, Statusschritte und Fehlermeldungen |
 | [2.0.4](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | Ältere stabile Version | Neue Oberfläche, Projekte, Dokumentanhänge und Updates |
 | [**2.0.2**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.2) | **Stabile Vorgängerversion** | Erste öffentliche Version mit Updates aus diesem Download-Repository |
 
-**Updates:** 2.0.7 ist als reguläres Release veröffentlicht und wird im normalen Kanal **Nur stabile Versionen** angeboten. In der App **Updates → Jetzt prüfen** wählen. Die Freigabe von Vorabversionen ist dafür nicht erforderlich. GitHubs **Latest** verweist auf 2.0.7. Die Versionsübersicht beginnt bei 2.0.2.
+**Updates:** 2.0.8 ist als reguläres Release veröffentlicht und wird im normalen Kanal **Nur stabile Versionen** angeboten. In der App **Updates → Jetzt prüfen** wählen. Die Freigabe von Vorabversionen ist dafür nicht erforderlich. GitHubs **Latest** verweist auf 2.0.8. Die Versionsübersicht beginnt bei 2.0.2.
 
 Die automatisch angebotenen „Source code“-Archive enthalten hier nur die Dokumentation und sind keine App-Installer.
 
@@ -28,25 +29,32 @@ Die automatisch angebotenen „Source code“-Archive enthalten hier nur die Dok
 
 Die Pakete sind **nicht Apple-notarisiert**. macOS kann eine Freigabe unter Datenschutz & Sicherheit verlangen; verwaltete Macs benötigen eventuell eine IT-Freigabe. Die separate kryptografische Updatesignatur ersetzt keine Apple-Notarisierung. [Installation und Gatekeeper](docs/INSTALLATION-MAC.md).
 
-## Neu in 2.0.7
+## Neu in 2.0.8
+
+**Modelle ohne Namenseingabe entdecken:** Beim Öffnen von „Hugging Face durchsuchen“ erscheinen beliebte GGUF-Modelle passend zum Modelltyp. Der Typwechsel lädt die Liste automatisch neu. Dateigrößen und geschätzter RAM-Bedarf helfen bei der Auswahl; der RAM-Filter bleibt optional. Eine Variante auswählen und erst danach bewusst herunterladen.
+
+![Hugging-Face-Katalog ohne Suchbegriff](docs/guide-assets/208-huggingface.png)
+
+**Weblinks funktionieren in der Mac-App:** Download-Repository, Modellseiten und andere externe HTTP(S)-Links öffnen den Standardbrowser.
+
 
 Das Symbol für die rechte Einstellungsleiste bleibt oben rechts in allen Bereichen sichtbar, auch bei Projekten. Nach dem Einklappen oder Schließen über X lässt sie sich dort wieder öffnen; deine Auswahl bleibt beim Bereichswechsel erhalten.
 
-[Installer herunterladen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7). **2.0.7 ist stabil und Latest.** Die Version unterstützt Updates am bisherigen Ort unter `/Applications`: Bei fehlenden Rechten fragt macOS nach Administrator-Zugangsdaten. StoryCore speichert diese nicht. Der App-Austausch wird vorbereitet und geprüft, bei Fehlern wird die bisherige App zurückgestellt. Kein dauerhafter Administrator-Dienst; Nutzerdaten bleiben erhalten.
+[Installer herunterladen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8). **2.0.8 ist stabil und Latest.** Die Version unterstützt Updates am bisherigen Ort unter `/Applications`: Bei fehlenden Rechten fragt macOS nach Administrator-Zugangsdaten. StoryCore speichert diese nicht. Der App-Austausch wird vorbereitet und geprüft, bei Fehlern wird die bisherige App zurückgestellt. Kein dauerhafter Administrator-Dienst; Nutzerdaten bleiben erhalten.
 
-**Bereits blockierte alte Version?** Die alte Schreibprüfung kann den neuen Fix nicht selbst laden. Einmal den Installer aus 2.0.7 ausführen; die App bleibt unter `/Applications`. `StoryCore.app` und `install-macos.sh` müssen neben `Install-StoryCore.command` bleiben. Danach steht dieser Weg im integrierten Updater bereit. [Ablauf und Grenzen](docs/UPDATES.md#updates-unter-applications-ab-206-beta).
+**Bereits blockierte alte Version?** Die alte Schreibprüfung kann den neuen Fix nicht selbst laden. Einmal den Installer aus 2.0.8 ausführen; die App bleibt unter `/Applications`. `StoryCore.app` und `install-macos.sh` müssen neben `Install-StoryCore.command` bleiben. Danach steht dieser Weg im integrierten Updater bereit. [Ablauf und Grenzen](docs/UPDATES.md#updates-unter-applications-ab-206-beta).
 
 **Teststand:** Austausch und Fehler-Rücksetzung wurden mit Test-Apps geprüft; der echte Systemdialog mit interaktiver Administratorfreigabe und anschließendem Neustart wurde noch nicht vollständig praktisch getestet.
 
 Für das Update: **Updates → Jetzt prüfen**. Der Standardkanal **Nur stabile Versionen** genügt. Die grafische Anzeige aus 2.0.5 mit echten Downloadwerten, Statusschritten und Fehlermeldungen ist weiterhin enthalten.
 
-Die Version enthält aktualisierte Anleitungen: [Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Installation-Mac.pdf) und [Nutzung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Erste-Schritte.pdf).
+Die Version enthält aktualisierte Anleitungen: [Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.8/StoryCore-Installation-Mac.pdf) und [Nutzung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.8/StoryCore-Erste-Schritte.pdf).
 
 ## Stabile Versionen und Betas
 
 **Neue Releases werden grundsätzlich als Beta veröffentlicht.** Erst nach ausdrücklicher Freigabe durch YorkStack werden sie als stabil und für den normalen Update-Kanal freigegeben. Erfolgreiche Tests allein sind keine Freigabe.
 
-- **Standard:** Die App prüft auf die neueste stabile Version, derzeit **2.0.7**.
+- **Standard:** Die App prüft auf die neueste stabile Version, derzeit **2.0.8**.
 - **Beta testen:** Unter **Updates → Versionen anbieten → Auch Vorabversionen** ausdrücklich aktivieren. Dieser Kanal berücksichtigt zusätzlich Betas.
 - **Vorgängerversion:** **2.0.2** ist der erste öffentliche Stand mit dem öffentlichen Updater. Die interne 2.0.1 nutzte noch das private Repository und ist kein öffentlicher Einstiegsinstaller.
 - Ein Wechsel zurück zu **Nur stabile Versionen** ändert die nächsten Update-Angebote. Er installiert keine ältere App automatisch.
@@ -60,7 +68,7 @@ Die Version enthält aktualisierte Anleitungen: [Installation (2 Seiten)](https:
 - [Updates und Datensicherung](docs/UPDATES.md)
 - [Sicher zu einer älteren Version zurückkehren](docs/ROLLBACK.md)
 
-**Bebilderte PDF-Anleitungen** liegen in jedem Installer und als einzelne Assets beim [aktuellen Release 2.0.7](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7).
+**Bebilderte PDF-Anleitungen** liegen in jedem Installer und als einzelne Assets beim [aktuellen Release 2.0.8](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8).
 
 ![Neue Startseite 2.0.4 mit isolierten Demo-Daten](docs/guide-assets/204-start.png)
 
@@ -75,7 +83,7 @@ PDF, DOCX, XLSX, MD, TXT, CSV und TSV direkt hineinziehen oder den Dateiknopf ve
 
 Textvorschau, Aktivierung und Kontextbudget machen die Auswahl nachvollziehbar. Keine OCR oder Excel-Formelberechnung. [Alle Grenzen und Bedienung](docs/NUTZUNG.md#dateien-per-drag-and-drop).
 
-Die neuen PDF-Anleitungen zeigen die aktuelle Oberfläche: **Installation (2 Seiten)** und **Erste Schritte (10 Seiten)**. Direkte Downloads: [Installation](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Installation-Mac.pdf) · [Nutzung](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Erste-Schritte.pdf).
+Die neuen PDF-Anleitungen zeigen die aktuelle Oberfläche: **Installation (2 Seiten)** und **Erste Schritte (10 Seiten)**. Direkte Downloads: [Installation](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.8/StoryCore-Installation-Mac.pdf) · [Nutzung](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.8/StoryCore-Erste-Schritte.pdf).
 
 ## Daten und Updates
 

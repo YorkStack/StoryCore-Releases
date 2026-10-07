@@ -1,6 +1,6 @@
 # StoryCore aktualisieren
 
-Stand: 2.0.7 stabil, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
+Stand: 2.0.8 stabil, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
 
 ## Updates unter /Applications ab 2.0.6 Beta
 
@@ -8,9 +8,9 @@ Stand: 2.0.7 stabil, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2
 
 Das signierte Paket wird vor dem Austausch in einem separaten Verzeichnis geprüft. Die bisherige App bleibt bis zur Kontrolle der neuen Installation erhalten. Bei Fehlern wird sie mit denselben Rechten zurückgestellt; bei abgebrochener Freigabe bleibt sie unverändert. Ein echtes schreibgeschütztes DMG wird separat erkannt und kann auch mit Administratorrechten nicht aktualisiert werden.
 
-**Einmaliger Übergang:** 2.0.2 bis 2.0.5 brechen bei bestimmten Installationsrechten schon vor dem Download ab. Dieser alte Programmcode lässt sich nicht durch neue Release-Metadaten reparieren. Betroffene Nutzer müssen einmal den [reparierten Installer 2.0.7](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7) ausführen. Er aktualisiert eine vorhandene App unter `/Applications` mit macOS-Freigabe. Danach ist dieser Weg direkt in der App eingebaut. Chats und Einstellungen werden nicht gelöscht; der separate Installer sichert die App, Nutzerdaten bitte zusätzlich sichern. Ohne verfügbaren Administrator kann eine geschützte Installation weiterhin nur durch die IT geändert werden.
+**Einmaliger Übergang:** 2.0.2 bis 2.0.5 brechen bei bestimmten Installationsrechten schon vor dem Download ab. Dieser alte Programmcode lässt sich nicht durch neue Release-Metadaten reparieren. Betroffene Nutzer müssen einmal den [reparierten Installer 2.0.8](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8) ausführen. Er aktualisiert eine vorhandene App unter `/Applications` mit macOS-Freigabe. Danach ist dieser Weg direkt in der App eingebaut. Chats und Einstellungen werden nicht gelöscht; der separate Installer sichert die App, Nutzerdaten bitte zusätzlich sichern. Ohne verfügbaren Administrator kann eine geschützte Installation weiterhin nur durch die IT geändert werden.
 
-**Release-Status:** 2.0.7 ist vom Eigentümer als stabil freigegeben und wird im Standardkanal angeboten. Der native Administrator-Dialog ist implementiert; ein kompletter Test mit interaktiver Administratorfreigabe steht noch aus. Unprivilegierter Austausch, Fehler-Rücksetzung, Archiv-Prüfung und Dialogskript-Kompilierung sind automatisiert geprüft.
+**Release-Status:** 2.0.8 ist vom Eigentümer als stabil freigegeben und wird im Standardkanal angeboten. Der native Administrator-Dialog ist implementiert; ein kompletter Test mit interaktiver Administratorfreigabe steht noch aus. Unprivilegierter Austausch, Fehler-Rücksetzung, Archiv-Prüfung und Dialogskript-Kompilierung sind automatisiert geprüft.
 
 ## Für Benutzer
 
@@ -30,7 +30,7 @@ Ein optionaler Token kann bei GitHub-API-Limits helfen. Ein ungültiger alter To
 
 Die Installation zeigt sechs Schritte, einen Downloadbalken mit echten Prozent- und MB-Werten, die vergangene Zeit und die nächste Aktion. Prüfung, Sicherung und Installation verwenden eine Aktivitätsanzeige ohne erfundene Prozentwerte oder Restzeit. Bei Fehlern bleibt die Meldung sichtbar; es gibt keinen automatischen Neustart. „Zurück zu Updates“ schließt die Meldung, „Erneut versuchen“ startet nach erneuter Bestätigung. Nach einem Fehler während der Wiederherstellung zuerst die genannte Sicherung prüfen.
 
-Beim ersten Update auf 2.0.5 verwendet die ältere App noch ihren bisherigen Bildschirm. Die neue Anzeige gilt für nachfolgende Updates. 2.0.5 bleibt eine ältere Beta; 2.0.7 ist stabil und Latest.
+Beim ersten Update auf 2.0.5 verwendet die ältere App noch ihren bisherigen Bildschirm. Die neue Anzeige gilt für nachfolgende Updates. 2.0.5 bleibt eine ältere Beta; 2.0.8 ist stabil und Latest.
 
 ![Update-Anzeige mit simuliertem Downloadstand](guide-assets/205-update-progress.png)
 
@@ -106,10 +106,10 @@ Referenzen: [Tauri-Updater](https://v2.tauri.app/plugin/updater/), [GitHub Relea
 
 Optionale Anhänge werden in Chat und Vergleich gespeichert; Projektwissen unterstützt zusätzlich Tabellen. Das Datenformat bleibt 1. Bestehende Daten werden weder migriert noch gelöscht. Originaldateien sind Bestandteil der Datensicherung. Die reguläre Version 2.0.4 enthält Installer, beide neuen PDF-Anleitungen und signierte Update-Artefakte.
 
-## Reguläre Freigabe von 2.0.7
+## Reguläre Freigabe von 2.0.8
 
-2.0.7 wird im Standardkanal **Nur stabile Versionen** angeboten. **Jetzt prüfen** umgeht die tägliche Wartefrist. Ein Vorabversions-Opt-in ist nicht erforderlich. GitHubs Latest zeigt ebenfalls auf 2.0.7. Die öffentliche Versionsübersicht beginnt bei 2.0.2. App-Paket und Datenformat bleiben bei dieser Freigabe unverändert.
+2.0.8 wird im Standardkanal **Nur stabile Versionen** angeboten. **Jetzt prüfen** umgeht die tägliche Wartefrist. Ein Vorabversions-Opt-in ist nicht erforderlich. GitHubs Latest zeigt ebenfalls auf 2.0.8. Die öffentliche Versionsübersicht beginnt bei 2.0.2. Das neue App-Paket enthält die Katalog- und Weblink-Korrekturen; das Datenformat bleibt unverändert.
 
 ## Freigaberegel
 
-Neue Releases werden als Beta veröffentlicht. Nur die ausdrückliche Freigabe des Eigentümers macht sie stabil und für den normalen Update-Kanal verfügbar. Standard bleibt **Nur stabile Versionen**. **Auch Vorabversionen** schaltet Betas ausdrücklich hinzu. Derzeit: **2.0.7 aktuell stabil**, **2.0.2 stabiler Vorgänger** (erster öffentlicher Updater). Interne 2.0.1 verwendete noch das private Repository. Ältere Versionen werden nicht automatisch als Downgrade installiert.
+Neue Releases werden als Beta veröffentlicht. Nur die ausdrückliche Freigabe des Eigentümers macht sie stabil und für den normalen Update-Kanal verfügbar. Standard bleibt **Nur stabile Versionen**. **Auch Vorabversionen** schaltet Betas ausdrücklich hinzu. Derzeit: **2.0.8 aktuell stabil**, **2.0.2 stabiler Vorgänger** (erster öffentlicher Updater). Interne 2.0.1 verwendete noch das private Repository. Ältere Versionen werden nicht automatisch als Downgrade installiert.

@@ -1,6 +1,6 @@
 # StoryCore nutzen
 
-Stand: **2.0.7 · 7. Oktober 2026**. [Bebilderte PDF-Anleitung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Erste-Schritte.pdf) · [Installation](INSTALLATION-MAC.md).
+Stand: **2.0.8 · 7. Oktober 2026**. [Bebilderte PDF-Anleitung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.8/StoryCore-Erste-Schritte.pdf) · [Installation](INSTALLATION-MAC.md).
 
 ## Startseite und neue Navigation
 
@@ -111,3 +111,18 @@ Unter **Gespeicherte Vergleiche** werden Prompt, Modellwahl und Anhänge wiederh
 ## Rechte Einstellungsleiste (ab 2.0.7)
 
 Oben rechts neben „Modellstatus aktualisieren“ bleibt das Seitenleisten-Symbol in allen Arbeitsbereichen sichtbar. Es öffnet oder schließt die rechte Einstellungsleiste; der Tooltip zeigt „Einstellungen einblenden“ oder „Einstellungen ausblenden“. Auch nach dem Schließen über das X lässt sie sich dort wieder öffnen. Eine manuelle Auswahl bleibt während der Sitzung beim Wechsel zwischen Projekten, Chat, Story, Modellvergleich und Verwaltung erhalten. Beim nächsten App-Start gilt wieder die Standardansicht: auf breiten Fenstern beim Schreiben und Vergleichen geöffnet, auf Übersichtsseiten zunächst geschlossen.
+
+
+## Hugging Face ohne Modellnamen durchsuchen (ab 2.0.8)
+
+Unter **Modelle → Hugging Face durchsuchen · mit RAM-Einschätzung** lädt beim Aufklappen automatisch eine Liste beliebter öffentlicher GGUF-Repositories, sortiert nach Downloads. Du musst keinen Namen kennen. **Modelltyp** wechselt zwischen Textgenerierung, Embeddings, Spracherkennung und allen GGUF-Modellen und lädt die passende Liste neu.
+
+Die Übersicht enthält bis zu sechs Repositories, die Anzahl der angezeigten Varianten, die kleinste Downloadgröße und bei Textmodellen die geschätzte RAM-Spanne. Repository aufklappen, Variante prüfen und **Zum Download auswählen** anklicken. Erst **Herunterladen** startet den Ollama-Download. **Modellseite öffnen** führt in den Standardbrowser.
+
+**Nur Textmodelle mit voraussichtlich passendem RAM** filtert die Ergebnisse lokal anhand der erkannten Hardware und eingestellten Kontextlänge. Es werden keine Hardwaredaten an Hugging Face gesendet. Ohne Treffer den RAM-Filter ausschalten oder eine Namenssuche verwenden. Unbekannte Größen gelten nicht als passend. RAM-Schätzungen garantieren weder Geschwindigkeit noch Ollama-Kompatibilität; Embeddings und Spracherkennung haben weiterhin keinen eigenen Testmodus in StoryCore.
+
+Das Suchfeld ist optional: Namen eingeben und **Suchen** drücken. Ein leeres Feld mit **Modelle anzeigen** kehrt zur beliebten Auswahl zurück. Direkte Anbieter/Repository-Adressen werden unabhängig vom Typfilter gelesen. Bei Netzwerkfehlern erscheint eine Fehlermeldung mit **Erneut versuchen**. Angefragt werden nur Katalog-/Dateimetadaten; Gewichte werden erst nach dem separaten Downloadklick geladen.
+
+## Weblinks in der Mac-App
+
+Links zu öffentlichen Downloads, Modellseiten und Recherchequellen öffnen den macOS-Standardbrowser. Dies gilt auch für **Updates → Öffentliche Downloads → YorkStack/StoryCore-Releases**. Bei einem Fehler erscheint eine Meldung mit der kopierbaren Adresse. Die App bleibt geöffnet.

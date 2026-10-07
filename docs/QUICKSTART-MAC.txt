@@ -24,7 +24,7 @@ Bei macOS-Rückfragen die beiliegende INSTALLATION-MAC.md lesen.
 Keine globalen Sicherheitseinstellungen deaktivieren.
 
 Anleitung und aktuelle Pakete:
-https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7
+https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8
 Das Download-Repository ist öffentlich; kein GitHub-Konto erforderlich.
 GitHubs „Source code“-ZIP ist kein fertiges Installationspaket.
 
@@ -39,7 +39,7 @@ den passenden API-Schlüssel speichern. Danach pro Anfrage einschalten,
 Suchbegriffe eingeben, suchen, Quellen prüfen und senden. Details: WEB-RECHERCHE.md.
 
 Öffentliche Downloads: https://github.com/YorkStack/StoryCore-Releases/releases
-Aktuell stabil: 2.0.7. Die öffentliche Versionsübersicht beginnt bei 2.0.2.
+Aktuell stabil: 2.0.8. Die öffentliche Versionsübersicht beginnt bei 2.0.2.
 Betas werden in der App nur nach Aktivierung von Auch Vorabversionen angeboten.
 Kein GitHub-Konto nötig. LICENSE.txt und THIRD-PARTY-NOTICES.txt beachten.
 

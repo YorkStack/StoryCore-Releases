@@ -60,4 +60,8 @@ Eine Sicherung schützt nicht vor jedem möglichen Fehler eines neuen Programms.
 
 ## Datenänderungen in 2.0.4
 
-Optionale Anhänge werden in Chat und Vergleich gespeichert; Projektwissen unterstützt zusätzlich Tabellen. Das Datenformat bleibt 1. Bestehende Daten werden weder migriert noch gelöscht. Originaldateien sind Bestandteil der Datensicherung. Die öffentliche Vorabversion 2.0.4 enthält Installer, beide neuen PDF-Anleitungen und signierte Update-Artefakte.
+Optionale Anhänge werden in Chat und Vergleich gespeichert; Projektwissen unterstützt zusätzlich Tabellen. Das Datenformat bleibt 1. Bestehende Daten werden weder migriert noch gelöscht. Originaldateien sind Bestandteil der Datensicherung. Die reguläre Version 2.0.4 enthält Installer, beide neuen PDF-Anleitungen und signierte Update-Artefakte.
+
+## Reguläre Freigabe von 2.0.4
+
+2.0.4 wird im Standardkanal **Nur stabile Versionen** angeboten. **Jetzt prüfen** umgeht die tägliche Wartefrist. Ein Vorabversions-Opt-in ist nicht erforderlich. GitHubs Latest zeigt ebenfalls auf 2.0.4; 1.7.1 ist nur noch im Archiv. App-Paket und Datenformat bleiben bei dieser Freigabe unverändert.

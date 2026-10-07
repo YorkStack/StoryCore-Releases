@@ -1,10 +1,10 @@
 # StoryCore nutzen
 
-Stand: **2.0.5 Beta · 7. Oktober 2026**. [Bebilderte PDF-Anleitung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Erste-Schritte.pdf) · [Installation](INSTALLATION-MAC.md).
+Stand: **2.0.7 Beta · 7. Oktober 2026**. [Bebilderte PDF-Anleitung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Erste-Schritte.pdf) · [Installation](INSTALLATION-MAC.md).
 
 ## Startseite und neue Navigation
 
-Die Startseite bietet **Chat beginnen → Projekt erarbeiten → Story erstellen → Modelle vergleichen**. **Start** in Kopfzeile oder Seitenleiste führt zurück ins Hauptmenü. Links liegen die vier Arbeitsbereiche, deine Projekte und letzte Chats; unten **Modelle**, **Mein Profil**, **Einstellungen** und **Updates**. Die Suche filtert Gespräche und Projekte. Unter **Storytelling** sind Charaktere, Personas und Lorebooks zusammengefasst. Die rechte Einstellungsleiste erscheint beim Schreiben und Vergleichen.
+Die Startseite bietet **Chat beginnen → Projekt erarbeiten → Story erstellen → Modelle vergleichen**. **Start** in Kopfzeile oder Seitenleiste führt zurück ins Hauptmenü. Links liegen die vier Arbeitsbereiche, deine Projekte und letzte Chats; unten **Modelle**, **Mein Profil**, **Einstellungen** und **Updates**. Die Suche filtert Gespräche und Projekte. Unter **Storytelling** sind Charaktere, Personas und Lorebooks zusammengefasst. Die rechte Einstellungsleiste lässt sich in allen Bereichen über das Symbol oben rechts öffnen und schließen.
 
 ![Startseite 2.0.4 mit neutralen Demo-Daten](guide-assets/204-start.png)
 
@@ -107,3 +107,7 @@ Gescannte PDFs benötigen vorher eine Texterkennung (OCR). Alte .doc- und .xls-D
 Im Vergleich dieselben Dateien wie im Chat anhängen oder hineinziehen. Vor dem Start Originale und Textvorschau prüfen. **Kontext für Anhänge** setzt das gemeinsame Budget. Mit **Prompt prüfen** kontrollierst du die tatsächlich ausgewählten Auszüge. Der eingefrorene Request einschließlich Projektwissen und Anhängen ist für alle Vergleichsmodelle gleich; die tatsächlichen Tokenzahlen können wegen unterschiedlicher Tokenizer abweichen.
 
 Unter **Gespeicherte Vergleiche** werden Prompt, Modellwahl und Anhänge wiederhergestellt. Noch nicht gestartete Vergleichsentwürfe sind ungespeichert; beim Wechsel wird gewarnt. Richtigkeit, Vollständigkeit und Nachvollziehbarkeit können selbst mit 1–5 bewertet und je Ergebnis gespeichert werden. **Übernehmen** erstellt einen Chat mit den Originalanhängen. Dokumentauszüge werden dabei nicht als zusätzliche sichtbare Nutzernachrichten eingefügt.
+
+## Rechte Einstellungsleiste (ab 2.0.7 Beta)
+
+Oben rechts neben „Modellstatus aktualisieren“ bleibt das Seitenleisten-Symbol in allen Arbeitsbereichen sichtbar. Es öffnet oder schließt die rechte Einstellungsleiste; der Tooltip zeigt „Einstellungen einblenden“ oder „Einstellungen ausblenden“. Auch nach dem Schließen über das X lässt sie sich dort wieder öffnen. Eine manuelle Auswahl bleibt während der Sitzung beim Wechsel zwischen Projekten, Chat, Story, Modellvergleich und Verwaltung erhalten. Beim nächsten App-Start gilt wieder die Standardansicht: auf breiten Fenstern beim Schreiben und Vergleichen geöffnet, auf Übersichtsseiten zunächst geschlossen.

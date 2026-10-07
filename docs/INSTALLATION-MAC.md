@@ -1,12 +1,12 @@
 # StoryCore auf dem Mac installieren
 
-Stand: **2.0.6 Beta / 2.0.4 stabil · 7. Oktober 2026**. Für Anwender ist der fertige Download vorgesehen; ein eigener Build ist optional.
+Stand: **2.0.7 Beta / 2.0.4 stabil · 7. Oktober 2026**. Für Anwender ist der fertige Download vorgesehen; ein eigener Build ist optional.
 
-**Bebilderte Kurzfassungen als PDF:** [Download und Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.6/StoryCore-Installation-Mac.pdf) · [Erste Schritte (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.6/StoryCore-Erste-Schritte.pdf). Beide PDFs liegen auch direkt im Installer-ZIP/DMG und als einzelne Release-Downloads. Die App-Abbildungen verwenden eine separate neutrale Demo-Bibliothek; simulierte Vergleichsantworten sind kein Benchmark. Diese Beispiele werden nicht in die App eingebaut.
+**Bebilderte Kurzfassungen als PDF:** [Download und Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Installation-Mac.pdf) · [Erste Schritte (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.7/StoryCore-Erste-Schritte.pdf). Beide PDFs liegen auch direkt im Installer-ZIP/DMG und als einzelne Release-Downloads. Die App-Abbildungen verwenden eine separate neutrale Demo-Bibliothek; simulierte Vergleichsantworten sind kein Benchmark. Diese Beispiele werden nicht in die App eingebaut.
 
 ## Fertiges Installationspaket von GitHub
 
-1. Öffne [den neuesten StoryCore-Release](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4). Die Downloads sind öffentlich und benötigen keinen GitHub-Zugang. Optional: [2.0.6 Beta](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6) ergänzt Updates unter /Applications mit macOS-Freigabe. 2.0.4 bleibt die stabile Standardversion.
+1. Öffne [den neuesten StoryCore-Release](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4). Die Downloads sind öffentlich und benötigen keinen GitHub-Zugang. Optional: [2.0.7 Beta](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7) ergänzt Updates unter /Applications mit macOS-Freigabe. 2.0.4 bleibt die stabile Standardversion.
 2. Lade unter **Assets** das zur Version passende `StoryCore_<Version>_Mac-Installer.zip` herunter. Verwende für die Installation **nicht** GitHubs automatisch angebotene „Source code“-Archive.
 3. Entpacke das ZIP und doppelklicke auf **Install-StoryCore.command**. Es öffnet sich ein Terminalfenster mit der geführten Prüfung und Installation. Die Datei `StoryCore.app` muss daneben liegen.
 4. Lies die Prüfung. Falls Ollama fehlt oder noch nicht läuft, wähle einen der angebotenen Wege. Installiere anschließend StoryCore und öffne die App auf Wunsch direkt aus der Routine.
@@ -80,3 +80,25 @@ bash Install-StoryCore.command --yes --app /absoluter/Pfad/StoryCore.app
 
 `--yes` bestätigt nur den StoryCore-Austausch. Ollama wird weder installiert noch gestartet. Exitcodes: **0** erfolgreich; **1** Fehler/inkompatibles System; **2** Check unvollständig (Ollama nicht erreichbar), Abbruch oder Übergabe an den Ollama-Download. `--check` prüft den Standardserver, nicht die individuelle StoryCore-Konfiguration.
 
+## Selbst aus dem Repository bauen
+
+Nur für Entwicklung: Apple Silicon, Node.js **22.12 oder neuer**, npm, Rust/Cargo und Xcode Command Line Tools. Tauri-Voraussetzungen: [offizielle Anleitung](https://v2.tauri.app/start/prerequisites/). Installationsquellen: [Node.js](https://nodejs.org/en/download), [Rust](https://www.rust-lang.org/tools/install). Die Apple-Werkzeuge werden bei Bedarf über `xcode-select --install` angefordert.
+
+```sh
+git clone https://github.com/YorkStack/OLLAMA-GUI.git
+cd OLLAMA-GUI
+npm ci
+npm run check
+npm run test:installer
+npm run desktop:build
+```
+
+Ergebnisse liegen unter `src-tauri/target/release/bundle/`: App in `macos/`, DMG und fertiges Installer-ZIP in `dmg/`. Im Checkout enthält `Install-StoryCore.command` selbst **keine eingebettete App** und lädt auch keinen privaten GitHub-Release automatisch herunter.
+
+Bestehende Release-Version aus dem Build installieren, ohne die Version zu erhöhen:
+
+```sh
+bash Install-StoryCore.command --app "$PWD/src-tauri/target/release/bundle/macos/StoryCore.app"
+```
+
+Die entwicklerseitigen Befehle `npm run desktop:install` und `npm run release:minor` erhöhen hingegen die Versionsnummer, bauen und nutzen den bisherigen Node-Installer mit ZIP-Sicherungen unter `../StoryCore-Mac/archived-apps/`. Details zur Veröffentlichung: [Release-Anleitung](RELEASING.md).

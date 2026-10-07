@@ -1,0 +1,41 @@
+StoryCore – Nutzungsbedingungen
+Copyright (c) 2026 YorkStack
+Stand: 7. Oktober 2026
+
+1. Erlaubte Nutzung
+YorkStack erlaubt die kostenlose private und geschäftliche Nutzung der
+offiziell veröffentlichten StoryCore-App, einschließlich Installation auf
+eigenen oder vom Nutzer administrierten Geräten und eigener Sicherungskopien.
+
+2. Veröffentlichung und Weitergabe
+App-Pakete werden ausschließlich über die offiziellen Downloads unter
+https://github.com/YorkStack/StoryCore-Releases bereitgestellt.
+Bitte verweise andere Nutzer auf diese Downloads. Eigenständiges Anbieten,
+Weiterverkaufen, Spiegeln oder Weiterverteilen der StoryCore-App ist ohne
+gesonderte Erlaubnis von YorkStack nicht gestattet.
+Die zentrale Installation innerhalb der eigenen Organisation ist erlaubt.
+
+3. Quellcode und Kennzeichen
+Der eigene StoryCore-Quellcode bleibt privat. Diese Erlaubnis überträgt
+keine Rechte zur Veröffentlichung dieses Quellcodes oder zur Nutzung der
+StoryCore-/YorkStack-Kennzeichen für eigene Produkte. Alle nicht ausdrücklich
+eingeräumten Rechte bleiben vorbehalten. Die Bedingungen gelten auch für
+die von YorkStack erstellte mitgelieferte Dokumentation und Gestaltung;
+Kopien für die interne Nutzung der App sind gestattet.
+
+4. Fremdsoftware und Modelle
+Fremdsoftware, Schriften und sonstige Drittbestandteile unterliegen
+ausschließlich ihren jeweiligen Lizenzen. Deren Rechte werden durch diese
+Bedingungen nicht eingeschränkt. Einzelheiten, Lizenztexte und Quellen
+stehen in THIRD-PARTY-NOTICES.txt, der SBOM und den beigefügten
+Drittanbieter-Quellarchiven. Das gilt insbesondere für Open-Source-Lizenzen.
+Ollama und Modellgewichte werden separat bezogen. Für Modelle und externe
+Dienste gelten die Bedingungen ihrer Anbieter.
+
+5. Betrieb und Ergebnisse
+Es wird keine bestimmte Eignung, Fehlerfreiheit, Ergebnisqualität oder
+dauerhafte Bereitstellung von Updates zugesagt. LLM-Ausgaben müssen vom
+Nutzer geprüft werden. Zwingende gesetzliche Rechte bleiben unberührt.
+
+Diese Bedingungen gewähren eine kostenlose Nutzungserlaubnis; StoryCore
+als Gesamtprodukt ist keine Open-Source-Software.

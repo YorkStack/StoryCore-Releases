@@ -1,12 +1,12 @@
 # StoryCore auf dem Mac installieren
 
-Stand: **2.0.5 Beta / 2.0.4 stabil · 7. Oktober 2026**. Für Anwender ist der fertige Download vorgesehen; ein eigener Build ist optional.
+Stand: **2.0.6 Beta / 2.0.4 stabil · 7. Oktober 2026**. Für Anwender ist der fertige Download vorgesehen; ein eigener Build ist optional.
 
-**Bebilderte Kurzfassungen als PDF:** [Download und Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Installation-Mac.pdf) · [Erste Schritte (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Erste-Schritte.pdf). Beide PDFs liegen auch direkt im Installer-ZIP/DMG und als einzelne Release-Downloads. Die App-Abbildungen verwenden eine separate neutrale Demo-Bibliothek; simulierte Vergleichsantworten sind kein Benchmark. Diese Beispiele werden nicht in die App eingebaut.
+**Bebilderte Kurzfassungen als PDF:** [Download und Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.6/StoryCore-Installation-Mac.pdf) · [Erste Schritte (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.6/StoryCore-Erste-Schritte.pdf). Beide PDFs liegen auch direkt im Installer-ZIP/DMG und als einzelne Release-Downloads. Die App-Abbildungen verwenden eine separate neutrale Demo-Bibliothek; simulierte Vergleichsantworten sind kein Benchmark. Diese Beispiele werden nicht in die App eingebaut.
 
 ## Fertiges Installationspaket von GitHub
 
-1. Öffne [den neuesten StoryCore-Release](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4). Die Downloads sind öffentlich und benötigen keinen GitHub-Zugang. Optional: [2.0.5 Beta](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) enthält die neue grafische Update-Anzeige. 2.0.4 bleibt die stabile Standardversion.
+1. Öffne [den neuesten StoryCore-Release](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4). Die Downloads sind öffentlich und benötigen keinen GitHub-Zugang. Optional: [2.0.6 Beta](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6) ergänzt Updates unter /Applications mit macOS-Freigabe. 2.0.4 bleibt die stabile Standardversion.
 2. Lade unter **Assets** das zur Version passende `StoryCore_<Version>_Mac-Installer.zip` herunter. Verwende für die Installation **nicht** GitHubs automatisch angebotene „Source code“-Archive.
 3. Entpacke das ZIP und doppelklicke auf **Install-StoryCore.command**. Es öffnet sich ein Terminalfenster mit der geführten Prüfung und Installation. Die Datei `StoryCore.app` muss daneben liegen.
 4. Lies die Prüfung. Falls Ollama fehlt oder noch nicht läuft, wähle einen der angebotenen Wege. Installiere anschließend StoryCore und öffne die App auf Wunsch direkt aus der Routine.
@@ -25,8 +25,10 @@ Alternativ: `StoryCore_<Version>_aarch64.dmg` öffnen. Darin liegt dieselbe Inst
 | Ollama erreichbar | Prüft ausschließlich `http://127.0.0.1:11434/api/version`, mit Zeitlimit und ohne Proxy/Weiterleitungen. |
 | App-Paket | Erwartete Bundle-ID, ARM64-Binärdatei und Integrität der Codesign-Signatur werden geprüft. Eine Ad-hoc-Signatur bestätigt keine Entwickleridentität. |
 | Bestehende App | Eine laufende StoryCore-App muss mit ⌘Q beendet werden; sie wird nicht zwangsweise geschlossen. |
-| Installationsziel | Neue Installation unter `~/Applications/StoryCore.app`; eine bestehende Installation unter `/Applications` wird dort aktualisiert. Bei zwei Kopien stoppt die Routine mit einem Hinweis. |
+| Installationsziel | Neue Installation unter `~/Applications/StoryCore.app`; eine bestehende Installation unter `/Applications` wird dort aktualisiert, bei Bedarf mit macOS-Administratorfreigabe. Bei zwei Kopien stoppt die Routine mit einem Hinweis. |
 | Update | Alte App wird als ZIP gesichert und geprüft. Die neue App wird zuerst separat kopiert und geprüft, dann umbenannt. Bei fehlgeschlagenem Austausch wird die vorherige App zurückgestellt. |
+
+**Bei geschütztem /Applications:** Der interaktive Installer zeigt die macOS-Abfrage für Administrator-Zugangsdaten. `--yes` öffnet keinen versteckten Passwortdialog, sondern meldet den nötigen interaktiven Aufruf. Die Datei `install-macos.sh` muss neben der Routine bleiben. [Einmalige Reparatur bisher blockierter Updates](UPDATES.md#updates-unter-applications-ab-206-beta).
 
 Node.js, npm, Rust, Xcode und Homebrew sind für die fertige App **nicht erforderlich**. Ollama und die Modellgewichte bleiben separate Komponenten. Die Hardwareprüfung und lokalen Daten werden nicht an einen Server übertragen.
 

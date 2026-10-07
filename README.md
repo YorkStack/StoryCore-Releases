@@ -14,7 +14,8 @@ ZIP entpacken und **Install-StoryCore.command** doppelklicken. Die App muss nebe
 
 | Version | Status | Verwendung |
 | --- | --- | --- |
-| [2.0.5](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) | **Beta · freiwillig testen** | Grafischer Update-Fortschritt, Statusschritte und Fehlermeldungen |
+| [2.0.6](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6) | **Beta · freiwillig testen** | Updates unter /Applications mit macOS-Freigabe und reparierter Installer |
+| [2.0.5](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) | Ältere Beta | Grafischer Update-Fortschritt, Statusschritte und Fehlermeldungen |
 | [**2.0.4**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | **Aktuell · stabil** | Neue Oberfläche, Projekte, Dokumentanhänge und Updates |
 | [**2.0.2**](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.2) | **Stabile Vorgängerversion** | Erste öffentliche Version mit Updates aus diesem Download-Repository |
 | [1.7.1](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v1.7.1) | Archiv · abgelöst | Bisherige Oberfläche ohne die neuen Projektarbeitsbereiche und Dokumentanhänge |
@@ -27,15 +28,17 @@ Die automatisch angebotenen „Source code“-Archive enthalten hier nur die Dok
 
 Die Pakete sind **nicht Apple-notarisiert**. macOS kann eine Freigabe unter Datenschutz & Sicherheit verlangen; verwaltete Macs benötigen eventuell eine IT-Freigabe. Die separate kryptografische Updatesignatur ersetzt keine Apple-Notarisierung. [Installation und Gatekeeper](docs/INSTALLATION-MAC.md).
 
-## Optional: 2.0.5 Beta
+## Optional: 2.0.6 Beta
 
-[Beta herunterladen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) oder in der App unter **Updates → Versionen anbieten → Auch Vorabversionen → Jetzt prüfen** auswählen. **2.0.4 bleibt stabil und Latest.**
+[Beta-Installer herunterladen](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6). **2.0.4 bleibt stabil und Latest.** Die neue Beta unterstützt Updates am bisherigen Ort unter `/Applications`: Bei fehlenden Rechten fragt macOS nach Administrator-Zugangsdaten. StoryCore speichert diese nicht. Der App-Austausch wird vorbereitet und geprüft, bei Fehlern wird die bisherige App zurückgestellt. Kein dauerhafter Administrator-Dienst; Nutzerdaten bleiben erhalten.
 
-Die neue Update-Anzeige zeigt tatsächliche Download-Prozente und MB, verstrichene Zeit, Prüfen, Sichern, Installation und den nächsten Schritt. Fehler bleiben mit Handlungsmöglichkeiten sichtbar. Beim ersten Wechsel auf 2.0.5 erscheint noch die alte Anzeige der installierten Version; für nachfolgende Updates wird die neue Ansicht verwendet. Keine Änderung am Datenformat.
+**Bereits blockierte alte Version?** Die alte Schreibprüfung kann den neuen Fix nicht selbst laden. Einmal den Installer aus 2.0.6 ausführen; die App bleibt unter `/Applications`. `StoryCore.app` und `install-macos.sh` müssen neben `Install-StoryCore.command` bleiben. Danach steht dieser Weg im integrierten Updater bereit. [Ablauf und Grenzen](docs/UPDATES.md#updates-unter-applications-ab-206-beta).
 
-![Update-Anzeige, Vorschau mit simuliertem Downloadstand](docs/guide-assets/205-update-progress.png)
+**Teststand:** Austausch und Fehler-Rücksetzung wurden mit Test-Apps geprüft; der echte Systemdialog mit interaktiver Administratorfreigabe und anschließendem Neustart wurde noch nicht vollständig praktisch getestet. Deshalb bleibt die Version Beta.
 
-Die Beta enthält aktualisierte PDF-Anleitungen: [Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Installation-Mac.pdf) und [Nutzung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.5/StoryCore-Erste-Schritte.pdf).
+Zum freiwilligen Testen des Update-Angebots: **Updates → Versionen anbieten → Auch Vorabversionen → Jetzt prüfen**. Die grafische Anzeige aus 2.0.5 mit echten Downloadwerten, Statusschritten und Fehlermeldungen ist weiterhin enthalten.
+
+Die Beta enthält aktualisierte Anleitungen: [Installation (2 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.6/StoryCore-Installation-Mac.pdf) und [Nutzung (10 Seiten)](https://github.com/YorkStack/StoryCore-Releases/releases/download/v2.0.6/StoryCore-Erste-Schritte.pdf).
 
 ## Stabile Versionen und Betas
 

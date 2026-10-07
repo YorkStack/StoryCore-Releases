@@ -1,6 +1,16 @@
 # StoryCore aktualisieren
 
-Stand: 2.0.5 Beta, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
+Stand: 2.0.6 Beta, 7. Oktober 2026. Der öffentliche Update-Kanal ist ab 2.0.2 enthalten. Ältere Apps benötigen einmal den normalen Installer aus dem öffentlichen Download-Repository.
+
+## Updates unter /Applications ab 2.0.6 Beta
+
+`/Applications` ist ein unterstützter normaler Installationsort. StoryCore aktualisiert die App dort, ohne sie in den Benutzerordner zu verschieben. Sind Administratorrechte erforderlich, erscheint der macOS-Systemdialog. Zugangsdaten werden ausschließlich dort eingegeben; StoryCore speichert sie nicht. Der Download und die Datensicherung laufen ohne erhöhte Rechte. Nur der abschließende App-Austausch verwendet die Freigabe. Kein dauerhaft installierter privilegierter Dienst.
+
+Das signierte Paket wird vor dem Austausch in einem separaten Verzeichnis geprüft. Die bisherige App bleibt bis zur Kontrolle der neuen Installation erhalten. Bei Fehlern wird sie mit denselben Rechten zurückgestellt; bei abgebrochener Freigabe bleibt sie unverändert. Ein echtes schreibgeschütztes DMG wird separat erkannt und kann auch mit Administratorrechten nicht aktualisiert werden.
+
+**Einmaliger Übergang:** 2.0.2 bis 2.0.5 brechen bei bestimmten Installationsrechten schon vor dem Download ab. Dieser alte Programmcode lässt sich nicht durch neue Release-Metadaten reparieren. Betroffene Nutzer müssen einmal den [reparierten Installer 2.0.6 Beta](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6) ausführen. Er aktualisiert eine vorhandene App unter `/Applications` mit macOS-Freigabe. Danach ist dieser Weg direkt in der App eingebaut. Chats und Einstellungen werden nicht gelöscht; der separate Installer sichert die App, Nutzerdaten bitte zusätzlich sichern. Ohne verfügbaren Administrator kann eine geschützte Installation weiterhin nur durch die IT geändert werden.
+
+**Release-Status:** 2.0.6 ist Beta und nur im freiwilligen Beta-Kanal sichtbar. 2.0.4 bleibt stabil. Der native Administrator-Dialog ist implementiert; ein kompletter Test mit interaktiver Administratorfreigabe steht noch aus. Unprivilegierter Austausch, Fehler-Rücksetzung, Archiv-Prüfung und Dialogskript-Kompilierung sind automatisiert geprüft.
 
 ## Für Benutzer
 

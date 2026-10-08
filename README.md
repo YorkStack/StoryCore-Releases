@@ -37,14 +37,14 @@ Gezählt werden Downloads der Installer-ZIPs, DMGs und Update-Pakete je veröffe
 
 | Version | Status | Installer-ZIP | DMG | Update-Paket | Gesamt |
 | --- | --- | ---: | ---: | ---: | ---: |
-| [2.0.8](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8) | Stabil | 0 | 0 | 1 | 1 |
+| [2.0.8](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.8) | Stabil | 1 | 0 | 1 | 2 |
 | [2.0.7](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.7) | Stabil | 1 | 0 | 2 | 3 |
 | [2.0.6](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.6) | Beta | 0 | 0 | 1 | 1 |
 | [2.0.5](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.5) | Beta | 0 | 0 | 1 | 1 |
 | [2.0.4](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.4) | Stabil | 0 | 0 | 2 | 2 |
 | [2.0.2](https://github.com/YorkStack/StoryCore-Releases/releases/tag/v2.0.2) | Stabil | 1 | 0 | 1 | 2 |
 
-Datenstand (zuletzt geändert): 07.10.2026 20:14 UTC.
+Datenstand (zuletzt geändert): 08.10.2026 12:12 UTC.
 
 <!-- download-stats:end -->
 
